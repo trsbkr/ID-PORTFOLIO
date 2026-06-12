@@ -16,9 +16,9 @@ const CONFIG = {
 
     visibleArc: 120,
 
-    radiusMobile: 320,
+    radiusMobile: 180,
 
-    radiusDesktop: 500
+    radiusDesktop: 260
 
 };
 
