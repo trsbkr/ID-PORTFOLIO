@@ -22,6 +22,44 @@ const CONFIG = {
 
 };
 
+const VISIBLE_SLOTS = 5;
+
+let currentIndex = 0;
+
+let uploadedImages = [];
+
+
+
+uploadedImages = [
+
+
+
+    null,
+
+    null,
+
+    null,
+
+    null,
+
+    null,
+
+
+
+    null,
+
+    null,
+
+    null,
+
+    null,
+
+    null
+
+
+
+];
+
 /*
 ------------------------------------
 CALCULATE RADIUS
@@ -35,6 +73,84 @@ function getRadius() {
         ? CONFIG.radiusMobile
 
         : CONFIG.radiusDesktop;
+}
+
+function getVisibleImages() {
+
+    const visible = [];
+
+    for (
+
+        let i = 0;
+
+        i < VISIBLE_SLOTS;
+
+        i++
+
+    ) {
+
+        let index =
+            (currentIndex + i) %
+            uploadedImages.length;
+
+        visible.push(
+
+            uploadedImages[index]
+
+        );
+
+    }
+
+    return visible;
+
+}
+
+/*
+------------------------------------
+RENDER VISIBLE CARDS
+------------------------------------
+*/
+
+function updateVisibleCards() {
+
+    const visibleImages =
+        getVisibleImages();
+
+    cards.forEach((card, index) => {
+
+        const image =
+            visibleImages[index];
+
+        const placeholder =
+            card.querySelector(
+                '.placeholder-content'
+            );
+
+        if (!image) {
+
+            placeholder.style.display =
+                'flex';
+
+            card.style.backgroundImage =
+                '';
+
+            return;
+        }
+
+        placeholder.style.display =
+            'none';
+
+        card.style.backgroundImage =
+            `url(${image})`;
+
+        card.style.backgroundSize =
+            'cover';
+
+        card.style.backgroundPosition =
+            'center';
+
+    });
+
 }
 
 /*
@@ -94,6 +210,8 @@ function positionCards() {
 }
 
 positionCards();
+
+updateVisibleCards();
 
 window.addEventListener(
     'resize',
