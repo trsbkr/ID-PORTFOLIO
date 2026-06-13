@@ -47,15 +47,15 @@
 
     position: absolute;
 
-    width: 40vw;
+    width: 45vw;
 
-    height: 40vw;
+    height: 45vw;
 
     border-radius: 50%;
 
-    filter: blur(120px);
+    filter: blur(160px);
 
-    opacity: .35;
+    opacity: .70;
 }
 
 .neon-layer::before {
@@ -67,8 +67,8 @@
     left: -10%;
 
     animation:
-    neonMoveOne
-    14s linear infinite alternate;
+neonMoveOne
+8s ease-in-out infinite alternate;
 }
 
 .neon-layer::after {
@@ -80,8 +80,8 @@
     right: -10%;
 
     animation:
-    neonMoveTwo
-    18s linear infinite alternate;
+neonMoveTwo
+10s ease-in-out infinite alternate;
 }
 
 @keyframes neonMoveOne {
@@ -255,6 +255,8 @@
     box-shadow:
     0 0 25px
     rgba(0,255,255,.08);
+
+    z-index: 1;
 }
 
 /* ==========================
@@ -333,3 +335,35 @@
 
     cursor: pointer;
 }
+
+/* ===================================
+   PHASE 4D UPDATE START
+   RESPONSIVE DESKTOP POLISH
+=================================== */
+
+@media (min-width: 768px) {
+
+    .img-carousel-gallery {
+
+        height: 42vh;
+    }
+
+    .carousel-card {
+
+        width: 240px;
+    }
+
+}
+
+@media (min-width: 1200px) {
+
+    .carousel-card {
+
+        width: 260px;
+    }
+
+}
+
+/* ===================================
+   PHASE 4D UPDATE END
+=================================== */
