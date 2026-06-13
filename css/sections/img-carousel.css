@@ -455,7 +455,7 @@ neonMoveTwo
 
 .carousel-nav.next {
 
-    right: 20%;
+    right: -5%;
 }
 
 @media (max-width: 1199px) {
