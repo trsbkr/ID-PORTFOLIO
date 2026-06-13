@@ -14,15 +14,36 @@ CONFIGURATION
 
 const CONFIG = {
 
-    visibleArc: 120,
+    visibleArcMobile: 120,
+
+    visibleArcDesktop: 120,
+
+    visibleArcLaptop: 140,
 
     radiusMobile: 180,
 
     radiusDesktop: 460,
 
+    radiusLaptop: 560,
+
     autoGlideInterval: 2500
 
 };
+
+function getVisibleArc() {
+
+    if (window.innerWidth >= 1200) {
+
+        return CONFIG.visibleArcLaptop;
+    }
+
+    if (window.innerWidth >= 768) {
+
+        return CONFIG.visibleArcDesktop;
+    }
+
+    return CONFIG.visibleArcMobile;
+}
 
 const VISIBLE_SLOTS = 5;
 
@@ -56,11 +77,17 @@ CALCULATE RADIUS
 
 function getRadius() {
 
-    return window.innerWidth < 768
+    if (window.innerWidth >= 1200) {
 
-        ? CONFIG.radiusMobile
+        return CONFIG.radiusLaptop;
+    }
 
-        : CONFIG.radiusDesktop;
+    if (window.innerWidth >= 768) {
+
+        return CONFIG.radiusDesktop;
+    }
+
+    return CONFIG.radiusMobile;
 }
 
 function getVisibleImages() {
@@ -174,12 +201,15 @@ function positionCards() {
 
     const totalCards = cards.length;
 
-    const startAngle =
-        -CONFIG.visibleArc / 2;
+    const visibleArc =
+    getVisibleArc();
 
-    const step =
-        CONFIG.visibleArc /
-        (totalCards - 1);
+const startAngle =
+    -visibleArc / 2;
+
+const step =
+    visibleArc /
+    (totalCards - 1);
 
     const radius = getRadius();
 
