@@ -403,7 +403,7 @@ neonMoveTwo
 
     cursor: pointer;
 
-    color: white;
+    color: #00ffff;
 
     opacity: 0;
 
@@ -417,15 +417,15 @@ neonMoveTwo
     backdrop-filter: blur(14px);
 
     background:
-    rgba(255,255,255,.08);
+    rgba(0,255,255,.15);
 
     border:
     1px solid
     rgba(255,255,255,.15);
 
     box-shadow:
-    0 0 18px
-    rgba(0,255,255,.20);
+    0 0 24px
+    rgba(0,255,255,.45);
 
     z-index: 40;
 }
@@ -444,8 +444,8 @@ neonMoveTwo
     scale(1.08);
 
     box-shadow:
-    0 0 24px
-    rgba(0,255,255,.45);
+    0 0 35px
+    rgba(0,255,255,.85);
 }
 
 .carousel-nav.prev {
