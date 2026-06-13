@@ -34,31 +34,17 @@ let uploadedImages = [];
 
 uploadedImages = [
 
+    'https://picsum.photos/id/10/500/900',
+    'https://picsum.photos/id/20/500/900',
+    'https://picsum.photos/id/30/500/900',
+    'https://picsum.photos/id/40/500/900',
+    'https://picsum.photos/id/50/500/900',
 
-
-    null,
-
-    null,
-
-    null,
-
-    null,
-
-    null,
-
-
-
-    null,
-
-    null,
-
-    null,
-
-    null,
-
-    null
-
-
+    'https://picsum.photos/id/60/500/900',
+    'https://picsum.photos/id/70/500/900',
+    'https://picsum.photos/id/80/500/900',
+    'https://picsum.photos/id/90/500/900',
+    'https://picsum.photos/id/100/500/900'
 
 ];
 
