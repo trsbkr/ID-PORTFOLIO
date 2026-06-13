@@ -18,7 +18,7 @@ const CONFIG = {
 
     radiusMobile: 180,
 
-    radiusDesktop: 280,
+    radiusDesktop: 480,
 
     autoGlideInterval: 2500
 
