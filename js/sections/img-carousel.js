@@ -18,13 +18,13 @@ const CONFIG = {
 
     visibleArcDesktop: 120,
 
-    visibleArcLaptop: 180,
+    visibleArcLaptop: 110,
 
     radiusMobile: 180,
 
     radiusDesktop: 460,
 
-    radiusLaptop: 460,
+    radiusLaptop: 500,
 
     autoGlideInterval: 2500
 
