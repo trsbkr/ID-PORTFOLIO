@@ -310,6 +310,192 @@ function resumeAutoGlide() {
 
 }
 
+function goNext() {
+
+    currentIndex++;
+
+    if (
+        currentIndex >=
+        uploadedImages.length
+    ) {
+
+        currentIndex = 0;
+
+    }
+
+    updateVisibleCards();
+
+}
+
+function goPrevious() {
+
+    currentIndex--;
+
+    if (
+        currentIndex < 0
+    ) {
+
+        currentIndex =
+            uploadedImages.length - 1;
+
+    }
+
+    updateVisibleCards();
+
+}
+
+
+function handleSwipe() {
+
+    const distance =
+
+        touchEndX -
+
+        touchStartX;
+
+    if (
+
+        Math.abs(distance)
+
+        <
+
+        SWIPE_THRESHOLD
+
+    ) {
+
+        return;
+
+    }
+
+    pauseAutoGlide();
+
+    if (distance < 0) {
+
+        goNext();
+
+    } else {
+
+        goPrevious();
+
+    }
+
+    resumeAutoGlide();
+
+}
+
+
+cylinder.addEventListener(
+
+    'touchstart',
+
+    (event) => {
+
+        touchStartX =
+
+            event.touches[0].clientX;
+
+        isDragging = true;
+
+        pauseAutoGlide();
+
+    }
+
+);
+
+cylinder.addEventListener(
+
+    'touchmove',
+
+    (event) => {
+
+        if (!isDragging) {
+
+            return;
+
+        }
+
+        touchEndX =
+
+            event.touches[0].clientX;
+
+    }
+
+);
+
+cylinder.addEventListener(
+
+    'touchend',
+
+    () => {
+
+        isDragging = false;
+
+        handleSwipe();
+
+    }
+
+);
+
+
+cylinder.addEventListener(
+
+    'mousedown',
+
+    (event) => {
+
+        touchStartX =
+
+            event.clientX;
+
+        isDragging = true;
+
+        pauseAutoGlide();
+
+    }
+
+);
+
+window.addEventListener(
+
+    'mousemove',
+
+    (event) => {
+
+        if (!isDragging) {
+
+            return;
+
+        }
+
+        touchEndX =
+
+            event.clientX;
+
+    }
+
+);
+
+window.addEventListener(
+
+    'mouseup',
+
+    () => {
+
+        if (!isDragging) {
+
+            return;
+
+        }
+
+        isDragging = false;
+
+        handleSwipe();
+
+    }
+
+);
+
+
 setInterval(
 
     autoGlide,
