@@ -1,15 +1,15 @@
 # ID-PORTFOLIO
 
 Current Phase:
-4B
-
-Current Milestone:
-Phase 1-4B Complete
-
-Repository + Layout + Geometry + Renderer Foundation
-
-Next Phase:
 4C
 
+Current Milestone:
+Phase 1-4C Milestone
+
+Repository + Layout + Geometry + Renderer + Auto Glide Foundation
+
+Next Phase:
+5
+
 Next Goal:
-Auto Glide Engine
+Touch Control + Bounce System
