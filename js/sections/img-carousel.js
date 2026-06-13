@@ -18,7 +18,9 @@ const CONFIG = {
 
     radiusMobile: 180,
 
-    radiusDesktop: 260
+    radiusDesktop: 260,
+
+    autoGlideInterval: 2500
 
 };
 
@@ -155,6 +157,29 @@ function updateVisibleCards() {
 
 /*
 ------------------------------------
+AUTO GLIDE
+------------------------------------
+*/
+
+function autoGlide() {
+
+    currentIndex++;
+
+    if (
+        currentIndex >=
+        uploadedImages.length
+    ) {
+
+        currentIndex = 0;
+
+    }
+
+    updateVisibleCards();
+
+}
+
+/*
+------------------------------------
 POSITION CARDS
 ------------------------------------
 */
@@ -216,4 +241,12 @@ updateVisibleCards();
 window.addEventListener(
     'resize',
     positionCards
+);
+
+setInterval(
+
+    autoGlide,
+
+    CONFIG.autoGlideInterval
+
 );
