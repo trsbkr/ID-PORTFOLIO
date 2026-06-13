@@ -6,6 +6,18 @@ const cards = document.querySelectorAll(
     '.carousel-card'
 );
 
+const gallery = document.querySelector(
+    '.img-carousel-gallery'
+);
+
+const prevButton = document.querySelector(
+    '.carousel-nav.prev'
+);
+
+const nextButton = document.querySelector(
+    '.carousel-nav.next'
+);
+
 /*
 ------------------------------------
 CONFIGURATION
@@ -66,6 +78,8 @@ let isDragging = false;
 const SWIPE_THRESHOLD = 50;
 
 let uploadedImages = [];
+
+let controlsTimeout = null;
 
 
 
@@ -344,6 +358,45 @@ function goPrevious() {
 
 }
 
+function showControls() {
+
+    if (
+        window.innerWidth < 1200
+    ) {
+
+        return;
+    }
+
+    prevButton.classList.add(
+        'visible'
+    );
+
+    nextButton.classList.add(
+        'visible'
+    );
+
+    clearTimeout(
+        controlsTimeout
+    );
+
+    controlsTimeout =
+        setTimeout(() => {
+
+            hideControls();
+
+        }, 5000);
+}
+
+function hideControls() {
+
+    prevButton.classList.remove(
+        'visible'
+    );
+
+    nextButton.classList.remove(
+        'visible'
+    );
+}
 
 function handleSwipe() {
 
@@ -495,6 +548,53 @@ window.addEventListener(
 
 );
 
+gallery.addEventListener(
+
+    'mouseenter',
+
+    showControls
+
+);
+
+gallery.addEventListener(
+
+    'mousemove',
+
+    showControls
+
+);
+
+prevButton.addEventListener(
+
+    'click',
+
+    () => {
+
+        pauseAutoGlide();
+
+        goPrevious();
+
+        resumeAutoGlide();
+
+    }
+
+);
+
+nextButton.addEventListener(
+
+    'click',
+
+    () => {
+
+        pauseAutoGlide();
+
+        goNext();
+
+        resumeAutoGlide();
+
+    }
+
+);
 
 setInterval(
 
