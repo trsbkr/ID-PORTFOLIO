@@ -18,7 +18,7 @@ const CONFIG = {
 
     visibleArcDesktop: 120,
 
-    visibleArcLaptop: 140,
+    visibleArcLaptop: 180,
 
     radiusMobile: 180,
 
