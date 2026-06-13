@@ -372,3 +372,97 @@ neonMoveTwo
 /* ===================================
    PHASE 4D UPDATE END
 =================================== */
+
+/* ==========================
+   DESKTOP NAVIGATION
+========================== */
+
+.carousel-nav {
+
+    position: absolute;
+
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    width: 58px;
+
+    height: 58px;
+
+    border: none;
+
+    border-radius: 50%;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    font-size: 1.4rem;
+
+    cursor: pointer;
+
+    color: white;
+
+    opacity: 0;
+
+    pointer-events: none;
+
+    transition:
+    opacity .35s ease,
+    transform .35s ease,
+    background .35s ease;
+
+    backdrop-filter: blur(14px);
+
+    background:
+    rgba(255,255,255,.08);
+
+    border:
+    1px solid
+    rgba(255,255,255,.15);
+
+    box-shadow:
+    0 0 18px
+    rgba(0,255,255,.20);
+
+    z-index: 40;
+}
+
+.carousel-nav.visible {
+
+    opacity: 1;
+
+    pointer-events: auto;
+}
+
+.carousel-nav:hover {
+
+    transform:
+    translateY(-50%)
+    scale(1.08);
+
+    box-shadow:
+    0 0 24px
+    rgba(0,255,255,.45);
+}
+
+.carousel-nav.prev {
+
+    left: 5%;
+}
+
+.carousel-nav.next {
+
+    right: 5%;
+}
+
+@media (max-width: 1199px) {
+
+    .carousel-nav {
+
+        display: none;
+    }
+
+}
