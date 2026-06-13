@@ -26,7 +26,9 @@ const CONFIG = {
 
     radiusLaptop: 500,
 
-    autoGlideInterval: 2500
+    autoGlideInterval: 2500,
+
+    autoResumeDelay: 5000
 
 };
 
@@ -48,6 +50,20 @@ function getVisibleArc() {
 const VISIBLE_SLOTS = 5;
 
 let currentIndex = 0;
+
+let swipeDirection = 1;
+
+let autoGlidePaused = false;
+
+let autoResumeTimeout = null;
+
+let touchStartX = 0;
+
+let touchEndX = 0;
+
+let isDragging = false;
+
+const SWIPE_THRESHOLD = 50;
 
 let uploadedImages = [];
 
@@ -176,6 +192,12 @@ AUTO GLIDE
 
 function autoGlide() {
 
+    if (autoGlidePaused) {
+
+        return;
+
+    }
+
     currentIndex++;
 
     if (
@@ -258,6 +280,35 @@ window.addEventListener(
     'resize',
     positionCards
 );
+
+function pauseAutoGlide() {
+
+    autoGlidePaused = true;
+
+    clearTimeout(
+        autoResumeTimeout
+    );
+
+}
+
+function resumeAutoGlide() {
+
+    clearTimeout(
+        autoResumeTimeout
+    );
+
+    autoResumeTimeout =
+        setTimeout(() => {
+
+            autoGlidePaused = false;
+
+        },
+
+        CONFIG.autoResumeDelay
+
+    );
+
+}
 
 setInterval(
 
