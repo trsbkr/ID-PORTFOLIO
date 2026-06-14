@@ -466,3 +466,41 @@ neonMoveTwo
     }
 
 }
+
+/* ==========================
+   EDGE FEEDBACK
+========================== */
+
+.edge-feedback {
+
+    animation:
+    edgePulse
+    .7s ease;
+}
+
+@keyframes edgePulse {
+
+    0% {
+
+        filter:
+        brightness(1);
+    }
+
+    25% {
+
+        filter:
+        brightness(1.35);
+    }
+
+    50% {
+
+        filter:
+        brightness(1.55);
+    }
+
+    100% {
+
+        filter:
+        brightness(1);
+    }
+}
