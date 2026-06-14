@@ -65,6 +65,10 @@ const CENTER_SLOT = 2;
 
 let currentIndex = 0;
 
+let isUserInteracting = false;
+
+let autoResumeTimer = null;
+
 let edgeFeedbackActive = false;
 
 let edgeFeedbackTimeout = null;
@@ -158,6 +162,23 @@ function getVisibleImages() {
 
 }
 
+function userInteractionStarted() {
+
+    isUserInteracting = true;
+
+    clearTimeout(
+        autoResumeTimer
+    );
+
+    autoResumeTimer =
+        setTimeout(() => {
+
+            isUserInteracting = false;
+
+        }, 5000);
+
+}
+
 function getCenterImageIndex() {
 
     return (
@@ -220,6 +241,23 @@ function triggerEdgeFeedback() {
 RENDER VISIBLE CARDS
 ------------------------------------
 */
+
+function userInteractionStarted() {
+
+    isUserInteracting = true;
+
+    clearTimeout(
+        autoResumeTimer
+    );
+
+    autoResumeTimer =
+        setTimeout(() => {
+
+            isUserInteracting = false;
+
+        }, 5000);
+
+}
 
 function updateVisibleCards() {
 
@@ -550,6 +588,8 @@ cylinder.addEventListener(
 
     (event) => {
 
+        userInteractionStarted();
+
         touchStartX =
 
             event.touches[0].clientX;
@@ -567,6 +607,8 @@ cylinder.addEventListener(
     'touchmove',
 
     (event) => {
+
+        userInteractionStarted();
 
         if (!isDragging) {
 
@@ -602,6 +644,8 @@ cylinder.addEventListener(
     'mousedown',
 
     (event) => {
+
+        userInteractionStarted();
 
         touchStartX =
 
@@ -677,6 +721,8 @@ prevButton.addEventListener(
 
     () => {
 
+        userInteractionStarted();
+
         pauseAutoGlide();
 
         goPrevious();
@@ -692,6 +738,8 @@ nextButton.addEventListener(
     'click',
 
     () => {
+
+        userInteractionStarted();
 
         pauseAutoGlide();
 
