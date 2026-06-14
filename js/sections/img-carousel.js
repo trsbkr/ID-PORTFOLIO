@@ -65,6 +65,10 @@ const CENTER_SLOT = 2;
 
 let currentIndex = 0;
 
+let edgeFeedbackActive = false;
+
+let edgeFeedbackTimeout = null;
+
 let navigationDirection = 1;
 
 let swipeDirection = 1;
@@ -181,6 +185,36 @@ function isLastImageCentered() {
 
 }
 
+function triggerEdgeFeedback() {
+
+    if (edgeFeedbackActive) {
+
+        return;
+    }
+
+    edgeFeedbackActive = true;
+
+    cylinder.classList.add(
+        'edge-feedback'
+    );
+
+    clearTimeout(
+        edgeFeedbackTimeout
+    );
+
+    edgeFeedbackTimeout =
+        setTimeout(() => {
+
+            cylinder.classList.remove(
+                'edge-feedback'
+            );
+
+            edgeFeedbackActive = false;
+
+        }, 700);
+
+}
+
 /*
 ------------------------------------
 RENDER VISIBLE CARDS
@@ -258,17 +292,13 @@ function autoGlide() {
 
     if (isFirstImageCentered()) {
 
-    console.log(
-        'FIRST IMAGE CENTERED'
-    );
+    triggerEdgeFeedback();
 
 }
 
 if (isLastImageCentered()) {
 
-    console.log(
-        'LAST IMAGE CENTERED'
-    );
+    triggerEdgeFeedback();
 
 }
 
