@@ -61,6 +61,8 @@ function getVisibleArc() {
 
 const VISIBLE_SLOTS = 5;
 
+const CENTER_SLOT = 2;
+
 let currentIndex = 0;
 
 let navigationDirection = 1;
@@ -152,6 +154,33 @@ function getVisibleImages() {
 
 }
 
+function getCenterImageIndex() {
+
+    return (
+        currentIndex +
+        CENTER_SLOT
+    ) %
+    uploadedImages.length;
+
+}
+
+function isFirstImageCentered() {
+
+    return (
+        getCenterImageIndex() === 0
+    );
+
+}
+
+function isLastImageCentered() {
+
+    return (
+        getCenterImageIndex() ===
+        uploadedImages.length - 1
+    );
+
+}
+
 /*
 ------------------------------------
 RENDER VISIBLE CARDS
@@ -226,6 +255,22 @@ function autoGlide() {
     }
 
     updateVisibleCards();
+
+    if (isFirstImageCentered()) {
+
+    console.log(
+        'FIRST IMAGE CENTERED'
+    );
+
+}
+
+if (isLastImageCentered()) {
+
+    console.log(
+        'LAST IMAGE CENTERED'
+    );
+
+}
 
 }
 
