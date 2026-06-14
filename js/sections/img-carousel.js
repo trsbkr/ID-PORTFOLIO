@@ -63,6 +63,8 @@ const VISIBLE_SLOTS = 5;
 
 let currentIndex = 0;
 
+let navigationDirection = 1;
+
 let swipeDirection = 1;
 
 let autoGlidePaused = false;
@@ -326,16 +328,25 @@ function resumeAutoGlide() {
 
 function goNext() {
 
-    currentIndex++;
+    const maxIndex =
+
+        uploadedImages.length -
+
+        VISIBLE_SLOTS;
 
     if (
-        currentIndex >=
-        uploadedImages.length
+
+        currentIndex >= maxIndex
+
     ) {
 
-        currentIndex = 0;
+        navigationDirection = -1;
+
+        return;
 
     }
+
+    currentIndex++;
 
     updateVisibleCards();
 
@@ -343,18 +354,39 @@ function goNext() {
 
 function goPrevious() {
 
-    currentIndex--;
-
     if (
-        currentIndex < 0
+
+        currentIndex <= 0
+
     ) {
 
-        currentIndex =
-            uploadedImages.length - 1;
+        navigationDirection = 1;
+
+        return;
 
     }
 
+    currentIndex--;
+
     updateVisibleCards();
+
+        }
+
+function pendulumStep() {
+
+    if (
+
+        navigationDirection === 1
+
+    ) {
+
+        goNext();
+
+    } else {
+
+        goPrevious();
+
+    }
 
 }
 
