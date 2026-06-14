@@ -242,23 +242,6 @@ RENDER VISIBLE CARDS
 ------------------------------------
 */
 
-function userInteractionStarted() {
-
-    isUserInteracting = true;
-
-    clearTimeout(
-        autoResumeTimer
-    );
-
-    autoResumeTimer =
-        setTimeout(() => {
-
-            isUserInteracting = false;
-
-        }, 5000);
-
-}
-
 function updateVisibleCards() {
 
     const visibleImages =
@@ -588,6 +571,8 @@ cylinder.addEventListener(
 
     (event) => {
 
+        touchEndX = touchStartX;
+
         userInteractionStarted();
 
         touchStartX =
@@ -644,6 +629,8 @@ cylinder.addEventListener(
     'mousedown',
 
     (event) => {
+
+        touchEndX = touchStartX;
 
         userInteractionStarted();
 
