@@ -532,6 +532,12 @@ function goPrevious() {
 
     } */
 
+    console.log(
+    'goPrevious:',
+    currentIndex
+   );
+    
+
     currentIndex--;
 
 updateVisibleCards();
