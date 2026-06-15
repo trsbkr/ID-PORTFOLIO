@@ -286,6 +286,20 @@ function updateVisibleCards() {
 
     cards.forEach((card, index) => {
 
+        //TEMPORARY TESTING
+        //BLOCK CODE FOR
+        //LAST 2 BLANK EDGE PH
+        //FOR MOBILE VIEW
+        console.log(
+    'currentIndex:',
+    currentIndex
+);
+
+console.log(
+    'visibleImages:',
+    visibleImages
+);
+
         const image =
             visibleImages[index];
 
