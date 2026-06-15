@@ -149,8 +149,15 @@ function getVisibleImages() {
     ) {
 
         let index =
-            (currentIndex + i) %
-            uploadedImages.length;
+(
+    (
+        currentIndex + i
+    )
+    +
+    uploadedImages.length
+)
+%
+uploadedImages.length;
 
         console.log(
             'index:',
