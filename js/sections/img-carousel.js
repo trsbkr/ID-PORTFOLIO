@@ -152,6 +152,11 @@ function getVisibleImages() {
             (currentIndex + i) %
             uploadedImages.length;
 
+        console.log(
+            'index:',
+                  index
+             );
+
         visible.push(
 
             uploadedImages[index]
