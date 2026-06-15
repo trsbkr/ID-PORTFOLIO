@@ -277,6 +277,10 @@ RENDER VISIBLE CARDS
 
 function updateVisibleCards() {
 
+    console.log(
+    getVisibleImages()
+      );
+
     const visibleImages =
         getVisibleImages();
 
