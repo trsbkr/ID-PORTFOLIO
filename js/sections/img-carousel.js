@@ -282,14 +282,24 @@ RENDER VISIBLE CARDS
 
 function updateVisibleCards() {
 
-    console.log(
+   /* console.log(
     getVisibleImages()
-      );
+      ); */
 
     const visibleImages =
         getVisibleImages();
 
-    cards.forEach((card, index) => {
+    console.log(
+        'visibleImages',
+        visibleImages
+    );
+
+    console.log(
+        'currentIndex:',
+        currentIndex
+    );
+
+  /*  cards.forEach((card, index) => {
 
         //TEMPORARY TESTING
         //BLOCK CODE FOR
@@ -303,7 +313,9 @@ function updateVisibleCards() {
 console.log(
     'visibleImages:',
     visibleImages
-);
+); */
+
+    cards.forEach((card, index) => {
 
         const image =
             visibleImages[index];
