@@ -528,6 +528,12 @@ function hideControls() {
 
 function handleSwipe() {
 
+    return;
+
+}
+
+/*function handleSwipe() {
+
     const distance =
 
         touchEndX -
@@ -562,7 +568,7 @@ function handleSwipe() {
 
     resumeAutoGlide();
 
-}
+}*/
 
 
 cylinder.addEventListener(
