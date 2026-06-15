@@ -87,6 +87,8 @@ let touchEndX = 0;
 
 let isDragging = false;
 
+let hasMoved = false;
+
 const SWIPE_THRESHOLD = 50;
 
 let uploadedImages = [];
@@ -582,8 +584,9 @@ cylinder.addEventListener(
         userInteractionStarted();
 
         touchStartX =
-
             event.touches[0].clientX;
+
+        hasMoved = false;
 
         isDragging = true;
 
@@ -611,6 +614,8 @@ cylinder.addEventListener(
 
             event.touches[0].clientX;
 
+        hasMoved = true;
+
     }
 
 );
@@ -623,7 +628,11 @@ cylinder.addEventListener(
 
         isDragging = false;
 
-        handleSwipe();
+        if (hasMoved) {
+
+    handleSwipe();
+
+        }
 
     }
 
@@ -635,6 +644,8 @@ cylinder.addEventListener(
     'mousedown',
 
     (event) => {
+
+        hasMoved = false;
 
         touchEndX = touchStartX;
 
@@ -657,6 +668,8 @@ window.addEventListener(
     'mousemove',
 
     (event) => {
+
+        hasMoved = true;
 
         if (!isDragging) {
 
@@ -686,7 +699,11 @@ window.addEventListener(
 
         isDragging = false;
 
-        handleSwipe();
+        if (hasMoved) {
+
+    handleSwipe();
+
+        }
 
     }
 
