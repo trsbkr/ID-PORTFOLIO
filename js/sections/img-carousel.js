@@ -445,7 +445,19 @@ function resumeAutoGlide() {
 
 function goNext() {
 
-    const maxIndex =
+    if (
+
+    isLastImageCentered()
+
+) {
+
+    triggerEdgeFeedback();
+
+    return;
+
+    }
+
+    /* const maxIndex =
 
         uploadedImages.length -
 
@@ -461,7 +473,7 @@ function goNext() {
 
         return;
 
-    }
+    } */
 
     currentIndex++;
 
@@ -475,6 +487,18 @@ function goPrevious() {
 
     if (
 
+    isFirstImageCentered()
+
+) {
+
+    triggerEdgeFeedback();
+
+    return;
+
+    }
+
+    /* if (
+
         currentIndex <= 0
 
     ) {
@@ -483,7 +507,7 @@ function goPrevious() {
 
         return;
 
-    }
+    } */
 
     currentIndex--;
 
