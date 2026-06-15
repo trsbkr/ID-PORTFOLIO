@@ -567,6 +567,72 @@ function handleSwipe() {
 }
 
 
+/*
+function handleSwipe() {
+
+    const distance =
+
+        touchEndX -
+
+        touchStartX;
+
+    if (
+
+        Math.abs(distance)
+
+        <
+
+        SWIPE_THRESHOLD
+
+    ) {
+
+        return;
+
+    }
+
+    pauseAutoGlide();
+
+    if (distance < 0) {
+
+        goNext();
+
+    } else {
+
+        goPrevious();
+
+    }
+
+    resumeAutoGlide();
+
+}
+*/
+
+cylinder.addEventListener(
+
+    'touchstart',
+
+    (event) => {
+
+        userInteractionStarted();
+
+        touchStartX =
+            event.touches[0].clientX;
+
+        touchEndX =
+            touchStartX;
+
+        hasMoved = false;
+
+        isDragging = true;
+
+        pauseAutoGlide();
+
+    }
+
+);
+
+
+/*
 cylinder.addEventListener(
 
     'touchstart',
@@ -590,7 +656,47 @@ cylinder.addEventListener(
 }
 
 );
+*/
 
+
+cylinder.addEventListener(
+
+    'touchmove',
+
+    (event) => {
+
+        if (!isDragging) {
+
+            return;
+
+        }
+
+        touchEndX =
+
+            event.touches[0].clientX;
+
+        if (
+
+            Math.abs(
+
+                touchEndX -
+
+                touchStartX
+
+            ) > 10
+
+        ) {
+
+            hasMoved = true;
+
+        }
+
+    }
+
+);
+
+
+/*
 cylinder.addEventListener(
 
     'touchmove',
@@ -625,6 +731,9 @@ cylinder.addEventListener(
 }
 
 );
+*/
+
+
 
 cylinder.addEventListener(
 
@@ -644,7 +753,7 @@ cylinder.addEventListener(
 
 );
 
-
+/*
 cylinder.addEventListener(
 
     'mousedown',
@@ -668,7 +777,36 @@ cylinder.addEventListener(
     }
 
 );
+*/
 
+
+cylinder.addEventListener(
+
+    'mousedown',
+
+    (event) => {
+
+        userInteractionStarted();
+
+        touchStartX =
+
+            event.clientX;
+
+        touchEndX =
+
+            touchStartX;
+
+        hasMoved = false;
+
+        isDragging = true;
+
+        pauseAutoGlide();
+
+    }
+
+);
+
+/*
 window.addEventListener(
 
     'mousemove',
@@ -703,6 +841,45 @@ window.addEventListener(
 }
 
 );
+*/
+
+
+window.addEventListener(
+
+    'mousemove',
+
+    (event) => {
+
+        if (!isDragging) {
+
+            return;
+
+        }
+
+        touchEndX =
+
+            event.clientX;
+
+        if (
+
+            Math.abs(
+
+                touchEndX -
+
+                touchStartX
+
+            ) > 10
+
+        ) {
+
+            hasMoved = true;
+
+        }
+
+    }
+
+);
+
 
 window.addEventListener(
 
