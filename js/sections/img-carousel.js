@@ -239,6 +239,37 @@ function triggerEdgeFeedback() {
 }
 
 /*
+----------------------
+User Navigation
+↓
+Check Edge
+↓
+If End
+   Trigger Feedback
+   Stop
+Else
+   Continue
+   --------------------
+   */
+
+function checkForEdgeFeedback() {
+
+    if (
+        isFirstImageCentered() ||
+        isLastImageCentered()
+    ) {
+
+        triggerEdgeFeedback();
+
+        return true;
+
+    }
+
+    return false;
+
+}
+
+/*
 ------------------------------------
 RENDER VISIBLE CARDS
 ------------------------------------
@@ -312,18 +343,6 @@ function autoGlide() {
     }
 
     updateVisibleCards();
-
-    if (isFirstImageCentered()) {
-
-    triggerEdgeFeedback();
-
-}
-
-if (isLastImageCentered()) {
-
-    triggerEdgeFeedback();
-
-}
 
 }
 
@@ -446,7 +465,9 @@ function goNext() {
 
     currentIndex++;
 
-    updateVisibleCards();
+updateVisibleCards();
+
+checkForEdgeFeedback();
 
 }
 
@@ -466,7 +487,9 @@ function goPrevious() {
 
     currentIndex--;
 
-    updateVisibleCards();
+updateVisibleCards();
+
+checkForEdgeFeedback();
 
         }
 
