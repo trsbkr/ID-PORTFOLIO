@@ -530,12 +530,6 @@ function hideControls() {
 
 function handleSwipe() {
 
-    return;
-
-}
-
-/*function handleSwipe() {
-
     const distance =
 
         touchEndX -
@@ -570,7 +564,7 @@ function handleSwipe() {
 
     resumeAutoGlide();
 
-}*/
+}
 
 
 cylinder.addEventListener(
@@ -579,20 +573,21 @@ cylinder.addEventListener(
 
     (event) => {
 
-        touchEndX = touchStartX;
+    userInteractionStarted();
 
-        userInteractionStarted();
+    touchStartX =
+        event.touches[0].clientX;
 
-        touchStartX =
-            event.touches[0].clientX;
+    touchEndX =
+        touchStartX;
 
-        hasMoved = false;
+    hasMoved = false;
 
-        isDragging = true;
+    isDragging = true;
 
-        pauseAutoGlide();
+    pauseAutoGlide();
 
-    }
+}
 
 );
 
@@ -602,21 +597,32 @@ cylinder.addEventListener(
 
     (event) => {
 
-        userInteractionStarted();
+    if (!isDragging) {
 
-        if (!isDragging) {
+        return;
 
-            return;
+    }
 
-        }
+    touchEndX =
+        event.touches[0].clientX;
 
-        touchEndX =
+    if (
 
-            event.touches[0].clientX;
+        Math.abs(
+
+            touchEndX -
+
+            touchStartX
+
+        ) > 10
+
+    ) {
 
         hasMoved = true;
 
     }
+
+}
 
 );
 
@@ -645,19 +651,19 @@ cylinder.addEventListener(
 
     (event) => {
 
-        hasMoved = false;
+    userInteractionStarted();
 
-        touchEndX = touchStartX;
+    touchStartX =
+        event.clientX;
 
-        userInteractionStarted();
+    touchEndX =
+        touchStartX;
 
-        touchStartX =
+    hasMoved = false;
 
-            event.clientX;
+    isDragging = true;
 
-        isDragging = true;
-
-        pauseAutoGlide();
+    pauseAutoGlide();
 
     }
 
@@ -669,19 +675,32 @@ window.addEventListener(
 
     (event) => {
 
-        hasMoved = true;
+    if (!isDragging) {
 
-        if (!isDragging) {
-
-            return;
-
-        }
-
-        touchEndX =
-
-            event.clientX;
+        return;
 
     }
+
+    touchEndX =
+        event.clientX;
+
+    if (
+
+        Math.abs(
+
+            touchEndX -
+
+            touchStartX
+
+        ) > 10
+
+    ) {
+
+        hasMoved = true;
+
+    }
+
+}
 
 );
 
