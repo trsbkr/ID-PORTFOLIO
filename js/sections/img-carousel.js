@@ -308,6 +308,13 @@ console.log(
         const image =
             visibleImages[index];
 
+        console.log(
+    'Card Slot:',
+    index,
+    'Image URL:',
+    image
+);
+
         const placeholder =
             card.querySelector(
                 '.placeholder-content'
