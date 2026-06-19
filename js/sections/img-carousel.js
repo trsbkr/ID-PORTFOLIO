@@ -68,7 +68,7 @@ const CONFIG = {
 
     autoResumeDelay: 5000,
 
-    maxImages: 25,
+    maxImages: 25
 
 };
 
