@@ -382,6 +382,44 @@ console.log(
 
 }
 
+function openTaskPreview() {
+
+    const centerCard = cards[CENTER_SLOT];
+
+    const image =
+        centerCard.style.backgroundImage;
+
+    previewImage.style.backgroundImage =
+        image;
+
+    previewLayer.style.pointerEvents =
+        'auto';
+
+    previewCard.style.visibility =
+        'visible';
+
+    previewCard.style.opacity =
+        '1';
+
+    pauseAutoGlide();
+
+}
+
+function closeTaskPreview() {
+
+    previewLayer.style.pointerEvents =
+        'none';
+
+    previewCard.style.opacity =
+        '0';
+
+    previewCard.style.visibility =
+        'hidden';
+
+    resumeAutoGlide();
+
+}
+
 /*
 ------------------------------------
 AUTO GLIDE
@@ -543,6 +581,30 @@ function goNext() {
     currentIndex++;
 
 updateVisibleCards();
+
+    cards.forEach((card, index) => {
+
+    card.addEventListener(
+
+        'click',
+
+        () => {
+
+            if (
+                index !== CENTER_SLOT
+            ) {
+
+                return;
+            }
+
+            openTaskPreview();
+
+        }
+
+    );
+
+});
+    
 
 checkForEdgeFeedback();
 
@@ -1070,6 +1132,18 @@ nextButton.addEventListener(
         goNext();
 
         resumeAutoGlide();
+
+    }
+
+);
+
+previewBack.addEventListener(
+
+    'click',
+
+    () => {
+
+        closeTaskPreview();
 
     }
 
