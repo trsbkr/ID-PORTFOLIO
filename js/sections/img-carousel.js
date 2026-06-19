@@ -552,6 +552,24 @@ updateVisibleCards();
 
 updateCapacityIndicator();
 
+capacityIndicator.classList.add(
+    'show'
+);
+
+setTimeout(
+
+    () => {
+
+        capacityIndicator.classList.remove(
+            'show'
+        );
+
+    },
+
+    3000
+
+);
+
     cards.forEach((card, index) => {
 
     card.addEventListener(
