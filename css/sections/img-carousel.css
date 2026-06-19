@@ -375,7 +375,7 @@ neonMoveTwo
 
 .task-preview-image {
 
-    height: 75%;
+    height: 70%;
 
     background-size: cover;
 
@@ -393,7 +393,7 @@ neonMoveTwo
 
 .task-preview-actions {
 
-    height: 5%;
+    height: 10%;
 
     display: flex;
 
