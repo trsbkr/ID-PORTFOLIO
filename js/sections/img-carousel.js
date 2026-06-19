@@ -512,6 +512,29 @@ positionCards();
 
 updateVisibleCards();
 
+    cards.forEach((card, index) => {
+
+    card.addEventListener(
+
+        'click',
+
+        () => {
+
+            if (
+                index !== CENTER_SLOT
+            ) {
+
+                return;
+            }
+
+            openTaskPreview();
+
+        }
+
+    );
+
+});
+
 window.addEventListener(
     'resize',
     positionCards
@@ -581,31 +604,7 @@ function goNext() {
     currentIndex++;
 
 updateVisibleCards();
-
-    cards.forEach((card, index) => {
-
-    card.addEventListener(
-
-        'click',
-
-        () => {
-
-            if (
-                index !== CENTER_SLOT
-            ) {
-
-                return;
-            }
-
-            openTaskPreview();
-
-        }
-
-    );
-
-});
     
-
 checkForEdgeFeedback();
 
 }
