@@ -349,6 +349,30 @@ neonMoveTwo
 
 }
 
+@media (min-width: 768px) {
+
+    .task-preview-card {
+
+        width: 700px;
+
+        height: 70vh;
+
+    }
+
+}
+
+@media (min-width: 1200px) {
+
+    .task-preview-card {
+
+        width: 850px;
+
+        height: 75vh;
+
+    }
+
+}
+
 .task-preview-image {
 
     height: 60%;
