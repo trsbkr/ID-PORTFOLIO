@@ -66,7 +66,7 @@ const CONFIG = {
 
     autoGlideInterval: 2500,
 
-    autoResumeDelay: 5000
+    autoResumeDelay: 5000,
 
     maxImages: 25,
 
