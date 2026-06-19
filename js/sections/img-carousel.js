@@ -1188,6 +1188,74 @@ previewBack.addEventListener(
 
 );
 
+const capacityObserver =
+
+    new IntersectionObserver(
+
+        (entries) => {
+
+            entries.forEach(
+
+                (entry) => {
+
+                    if (
+
+                        !entry.isIntersecting
+
+                    ) {
+
+                        return;
+
+                    }
+
+                    if (
+
+                        uploadedImages.length >=
+
+                        CONFIG.maxImages
+
+                    ) {
+
+                        return;
+
+                    }
+
+                    capacityIndicator.classList.add(
+                        'show'
+                    );
+
+                    setTimeout(
+
+                        () => {
+
+                            capacityIndicator.classList.remove(
+                                'show'
+                            );
+
+                        },
+
+                        3000
+
+                    );
+
+                }
+
+            );
+
+        },
+
+        {
+
+            threshold: 0.4
+
+        }
+
+    );
+
+capacityObserver.observe(
+    gallery
+);
+
 setInterval(
 
     autoGlide,
