@@ -135,7 +135,7 @@ transition:
 
     left: 1rem;
 
-    display: none;
+    display: flex;
 
     align-items: center;
 
