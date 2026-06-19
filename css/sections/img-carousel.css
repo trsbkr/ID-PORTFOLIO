@@ -124,6 +124,11 @@ neonMoveTwo
 
 .capacity-indicator {
 
+    opacity: 0;
+
+transition:
+    opacity 0.5s ease;
+
     position: absolute;
 
     top: 1rem;
@@ -148,10 +153,6 @@ neonMoveTwo
 
     z-index: 30;
 
-    opacity: 0;
-
-transition:
-    opacity 0.5s ease;
 }
 
 .capacity-indicator.show {
