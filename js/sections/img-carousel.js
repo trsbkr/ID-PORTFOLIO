@@ -18,6 +18,22 @@ const nextButton = document.querySelector(
     '.carousel-nav.next'
 );
 
+const previewLayer = document.querySelector(
+    '.image-focus-view'
+);
+
+const previewCard = document.querySelector(
+    '.task-preview-card'
+);
+
+const previewImage = document.querySelector(
+    '.task-preview-image'
+);
+
+const previewBack = document.querySelector(
+    '.preview-back'
+);
+
 /*
 ------------------------------------
 CONFIGURATION
