@@ -44,6 +44,10 @@ const previewBack = document.querySelector(
     '.preview-back'
 );
 
+const previewView = document.querySelector(
+        '.preview-view'
+    );
+
 /*
 ------------------------------------
 CONFIGURATION
@@ -1201,6 +1205,19 @@ previewBack.addEventListener(
     () => {
 
         closeTaskPreview();
+
+    }
+
+);
+
+previewView.addEventListener(
+
+    'click',
+
+    () => {
+
+        window.location.href =
+            'works.html';
 
     }
 
