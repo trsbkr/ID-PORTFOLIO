@@ -355,9 +355,9 @@ neonMoveTwo
 
     .task-preview-card {
 
-        width: 92vw;
+        width: 88vw;
 
-        height: 80vh;
+        height: 75vh;
 
     }
 
@@ -375,13 +375,13 @@ neonMoveTwo
 
 }
 
-@media (min-width: 1200px) {
+@media (max-width: 1400px) {
 
     .task-preview-card {
 
-        width: 950px;
+        width: 65vw;
 
-        height: 85vh;
+        height: 90vh;
 
     }
 
