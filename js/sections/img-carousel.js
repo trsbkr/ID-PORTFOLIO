@@ -10,6 +10,16 @@ const gallery = document.querySelector(
     '.img-carousel-gallery'
 );
 
+const capacityIndicator =
+    document.querySelector(
+        '.capacity-indicator'
+    );
+
+const remainingCount =
+    document.querySelector(
+        '.remaining-count'
+    );
+
 const prevButton = document.querySelector(
     '.carousel-nav.prev'
 );
@@ -57,6 +67,8 @@ const CONFIG = {
     autoGlideInterval: 2500,
 
     autoResumeDelay: 5000
+
+    maxImages: 25,
 
 };
 
@@ -189,6 +201,32 @@ uploadedImages.length;
     }
 
     return visible;
+
+}
+
+function updateCapacityIndicator() {
+
+    const remaining =
+
+        CONFIG.maxImages -
+
+        uploadedImages.length;
+
+    if (
+
+        remaining <= 0
+
+    ) {
+
+        capacityIndicator.style.display =
+            'none';
+
+        return;
+
+    }
+
+    remainingCount.textContent =
+        `${remaining}+`;
 
 }
 
@@ -511,6 +549,8 @@ const step =
 positionCards();
 
 updateVisibleCards();
+
+updateCapacityIndicator();
 
     cards.forEach((card, index) => {
 
