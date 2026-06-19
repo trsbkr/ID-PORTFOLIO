@@ -299,6 +299,25 @@ neonMoveTwo
 
 .image-focus-view {
 
+    position: fixed;
+
+    inset: 0;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    pointer-events: none;
+
+    z-index: 5000;
+
+}
+
+
+/* .image-focus-view {
+
     position: absolute;
 
     inset: 0;
@@ -310,7 +329,58 @@ neonMoveTwo
     align-items: center;
 
     z-index: 50;
+} */
+
+.task-preview-card {
+
+    width: 420px;
+
+    height: 60vh;
+
+    background: white;
+
+    border-radius: 20px;
+
+    overflow: hidden;
+
+    opacity: 0;
+
+    visibility: hidden;
+
 }
+
+.task-preview-image {
+
+    height: 60%;
+
+    background-size: cover;
+
+    background-position: center;
+
+}
+
+.task-preview-content {
+
+    height: 30%;
+
+    padding: 18px;
+
+}
+
+.task-preview-actions {
+
+    height: 10%;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    padding: 0 18px;
+
+}
+
 
 .viewer-button {
 
