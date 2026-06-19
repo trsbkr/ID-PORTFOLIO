@@ -365,7 +365,7 @@ neonMoveTwo
 
     .task-preview-card {
 
-        width: 850px;
+        width: 950px;
 
         height: 85vh;
 
@@ -375,7 +375,7 @@ neonMoveTwo
 
 .task-preview-image {
 
-    height: 60%;
+    height: 75%;
 
     background-size: cover;
 
@@ -385,7 +385,7 @@ neonMoveTwo
 
 .task-preview-content {
 
-    height: 30%;
+    height: 20%;
 
     padding: 18px;
 
@@ -393,7 +393,7 @@ neonMoveTwo
 
 .task-preview-actions {
 
-    height: 10%;
+    height: 5%;
 
     display: flex;
 
