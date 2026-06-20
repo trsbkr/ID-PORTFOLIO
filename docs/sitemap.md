@@ -38,6 +38,12 @@ IDPORT
 │   ├── Project Pages
 │   └── Media Gallery
 │
+├── AUTHENTICATION
+│   │
+│   ├── Register
+│   ├── Login
+│   └── Account Recovery
+│
 ├── EDITS
 │   │
 │   ├── Profile Editor
@@ -47,15 +53,9 @@ IDPORT
 │   ├── Project Manager
 │   └── Services Manager
 │
-├── SIGNUP
-│   │
-│   ├── Register
-│   ├── Login
-│   └── Account Recovery
-│
 └── USER PROFILE
-│
-├── Permissions
-├── Upload Capacity
-├── Storage
-└── Settings
+    │
+    ├── Permissions
+    ├── Upload Capacity
+    ├── Storage
+    └── Settings
