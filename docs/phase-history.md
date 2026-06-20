@@ -61,7 +61,7 @@ Features:
 
 ---
 
-# PHASE 1
+## PHASE 1
 
 Repository Foundation
 
@@ -69,7 +69,7 @@ Completed
 
 ---
 
-# PHASE 2
+## PHASE 2
 
 HTML Carousel Structure
 
@@ -84,7 +84,7 @@ Features:
 
 ---
 
-# PHASE 3
+## PHASE 3
 
 Carousel Geometry Engine
 
@@ -99,7 +99,7 @@ Features:
 
 ---
 
-# PHASE 4
+## PHASE 4
 
 Carousel Rendering Engine
 
@@ -114,7 +114,7 @@ Features:
 
 ---
 
-# PHASE 5
+## PHASE 5
 
 Motion Engine
 
@@ -130,7 +130,7 @@ Features:
 
 ---
 
-# PHASE 6
+## PHASE 6
 
 User Interaction System
 
@@ -145,7 +145,7 @@ Features:
 
 ---
 
-# PHASE 7
+## PHASE 7
 
 Center Card Architecture
 
@@ -195,7 +195,7 @@ all devices.
 
 ---
 
-# PHASE 8
+## PHASE 8
 
 Preview System
 
@@ -232,7 +232,7 @@ all interaction paths.
 
 ---
 
-# PHASE 9
+## PHASE 9
 
 Upload Capacity Reminder
 
@@ -249,13 +249,13 @@ Features:
 
 # CAROUSEL SYSTEM
 
-# STATUS:
+## STATUS:
 
-# COMPLETE
+## COMPLETE
 
 
 ---
-# Upcoming
+## Upcoming
 ---
 
 Current
