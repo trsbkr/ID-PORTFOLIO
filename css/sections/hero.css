@@ -40,17 +40,8 @@
 
 }
 
-.hero-portrait {
 
-    height: 45vh;
-
-    aspect-ratio: 3 / 4;
-
-    width: auto;
-
-}
-
-/* .hero-portrait {
+ .hero-portrait {
 
     position: absolute;
 
@@ -61,15 +52,17 @@
     transform:
     translateX(-50%);
 
-    width: 300px;
+    height: 45vh;
 
-    height: 75vh;
+    aspect-ratio: 3 / 4;
+
+    width: auto;
 
     background:
     #ff0000;
 
     z-index: 2;
 
-} */
+} 
 
 
