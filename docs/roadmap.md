@@ -1,46 +1,46 @@
 # Roadmap
 ---
-# Completed Phase
+## Completed Phase
 ---
 
-# Phase 1 ✔
+## Phase 1 ✔
 Repository Foundation
 
-# Phase 2 ✔
+## Phase 2 ✔
 Carousel Structure
 
-# Phase 3 ✔
+## Phase 3 ✔
 Geometry Engine
 
-# Phase 4 ✔
+## Phase 4 ✔
 Rendering Engine
 
-# Phase 5 ✔
+## Phase 5 ✔
 Motion Engine
 
-# Phase 6 ✔
+## Phase 6 ✔
 Interaction Engine
 
-# Phase 7 ✔
+## Phase 7 ✔
 Center Card Architecture
 
-# Phase 8 ✔
+## Phase 8 ✔
 Preview System
 
-# Phase 9 ✔
+## Phase 9 ✔
 Upload Capacity Reminder
 
 ---
 
-# Current
+## Current
 
-# Phase 10
+### Phase 10
 
-Hero Section
+#### Hero Section
 
 ---
 
-Upcoming
+#### Upcoming
 
 Phase 11
 About Section
