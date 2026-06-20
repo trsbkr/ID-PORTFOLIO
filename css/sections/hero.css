@@ -30,13 +30,19 @@
         -50%
     );
 
-    font-size: 4rem;
+    font-size: 10vw;
 
     font-weight: 900;
 
     color: white;
 
     z-index: 1;
+
+        width: 80%;
+
+    text-align: center;
+
+    white-space: nowrap;
 
 }
 
@@ -45,7 +51,7 @@
 
     position: absolute;
 
-    left: 50%;
+    left: 35%;
 
     bottom: 0;
 
@@ -64,5 +70,90 @@
     z-index: 2;
 
 } 
+
+
+/* MOBILE NORMAL BROWSER */
+
+@media (max-width: 768px) {
+
+    .hero {
+
+        height: 60vh;
+
+    }
+
+    .hero-portrait {
+
+        width: 140px;
+
+        height: 35vh;
+
+        left: 50%;
+
+    }
+
+    .hero-name {
+
+        font-size: 12vw;
+
+    }
+
+}
+
+
+/* MOBILE DESKTOP BROWSER */
+
+@media (min-width: 768px)
+and
+(max-width: 1199px) {
+
+    .hero {
+
+        height: 70vh;
+
+    }
+
+    .hero-portrait {
+
+        width: 180px;
+
+        height: 45vh;
+
+        left: 42%;
+
+    }
+
+}
+
+
+/* DESKTOP LAPTOP BROWSER */
+
+@media (min-width: 1200px) {
+
+    .hero {
+
+        height: 75vh;
+
+    }
+
+    .hero-portrait {
+
+        width: 220px;
+
+        height: 55vh;
+
+        left: 35%;
+
+    }
+
+}
+
+
+
+
+
+
+
+
 
 
