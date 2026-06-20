@@ -1,15 +1,16 @@
 # ID-PORTFOLIO
 
 Current Phase:
-8
+10
 
 Current Focus:
 Hero Section
 
 Current Milestone:
-Carousel Complete
+Homepage Architecture
 
-Completed:
+Completed: 
+Carousel System
 
 Phase 1
 Phase 2
@@ -18,6 +19,8 @@ Phase 4
 Phase 5
 Phase 6
 Phase 7
+Phase 8
+Phase 9
 
 Next Goal:
 
