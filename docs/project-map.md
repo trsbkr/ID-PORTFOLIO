@@ -1,3 +1,29 @@
-# Project Map
+# ID-PORTFOLIO
 
-Visual representation of project organization.
+Current Phase:
+8
+
+Current Focus:
+Hero Section
+
+Current Milestone:
+Carousel Complete
+
+Completed:
+
+Phase 1
+Phase 2
+Phase 3
+Phase 4
+Phase 5
+Phase 6
+Phase 7
+
+Next Goal:
+
+Hero Section Architecture
+
+* Theme System
+* Portrait System
+* Quote System
+* Navigation Toggle System
