@@ -54,76 +54,253 @@ Features:
 - 2500ms interval
 - Continuous window advancement
 
+
 ---
 
-# NEW PHASE STRUCTURE
+# NEW PHASE HISTORY
 
-PHASE 1
+---
+
+# PHASE 1
+
 Repository Foundation
 
-PHASE 2
-HTML Structure
-
-PHASE 3
-Carousel Geometry System
-
-PHASE 4
-Carousel Rendering System
-
-PHASE 5
-Carousel Interaction System
-
-PHASE 6
-Carousel Preview System
-
-PHASE 7
-Carousel Completion
+Completed
 
 ---
 
-CAROUSEL STATUS
-COMPLETE
+# PHASE 2
+
+HTML Carousel Structure
+
+Completed
+
+Features:
+
+* Hero container
+* Carousel container
+* Navigation arrows
+* Placeholder cards
 
 ---
 
-PHASE 8
+# PHASE 3
+
+Carousel Geometry Engine
+
+Completed
+
+Features:
+
+* 120° visible arc
+* 5 card architecture
+* Radius system
+* Scaling system
+
+---
+
+# PHASE 4
+
+Carousel Rendering Engine
+
+Completed
+
+Features:
+
+* currentIndex
+* visibleImages
+* updateVisibleCards()
+* positionCards()
+
+---
+
+# PHASE 5
+
+Motion Engine
+
+Completed
+
+Features:
+
+* Auto glide
+* Direction control
+* Window advancement
+* Pause system
+* Resume system
+
+---
+
+# PHASE 6
+
+User Interaction System
+
+Completed
+
+Features:
+
+* Touch swipe
+* Drag detection
+* Arrow navigation
+* Edge detection
+
+---
+
+# PHASE 7
+
+Center Card Architecture
+
+Completed
+
+Features:
+
+* Center card locking
+* FPH center positioning
+* LPH center positioning
+
+Major Debug:
+
+Negative Index Bug
+
+Issue:
+
+Desktop and mobile generated
+blank cards whenever
+currentIndex became negative.
+
+Root Cause:
+
+JavaScript modulo with
+negative numbers.
+
+Example:
+
+(-1 % 10) = -1
+
+instead of
+
+9
+
+Solution:
+
+((currentIndex + i)
+
+* uploadedImages.length)
+  %
+  uploadedImages.length
+
+Result:
+
+Stable rendering across
+all devices.
+
+---
+
+# PHASE 8
+
+Preview System
+
+Completed
+
+Features:
+
+* Task preview popup
+* Backdrop blur
+* Card lift animation
+* Back button
+* View button
+* Fullscreen integration point
+
+Major Debug:
+
+Preview opened only
+after swipe-left.
+
+Root Cause:
+
+Click listener accidentally
+attached inside goNext().
+
+Solution:
+
+Moved listener to
+initialization architecture.
+
+Result:
+
+Preview opens from
+all interaction paths.
+
+---
+
+# PHASE 9
+
+Upload Capacity Reminder
+
+Completed
+
+Features:
+
+* Remaining uploads display
+* Auto fade
+* Visibility logic
+* User-only architecture planned
+
+---
+
+# CAROUSEL SYSTEM
+
+# STATUS:
+
+# COMPLETE
+
+
+---
+# Upcoming
+---
+
+Current
+
+Phase 10
+
 Hero Section
 
-PHASE 9
+---
+
+Phase 11
 About Section
 
-PHASE 10
+Phase 12
 Featured Projects
 
-PHASE 11
-Services Section
+Phase 13
+Services
 
-PHASE 12
-Home Page Integration
+Phase 14
+Home Integration
 
-PHASE 13
+Phase 15
 About Page
 
-PHASE 14
+Phase 16
 Works Page
 
-PHASE 15
+Phase 17
 Edit Dashboard
 
-PHASE 16
-Signup / Authentication
+Phase 18
+Authentication
 
-PHASE 17
-Role Permission System
+Phase 19
+Permission System
 
-PHASE 18
-Search Identity System
+Phase 20
+Identity Search
 
-PHASE 19
+Phase 21
 Database Integration
 
-PHASE 20
-Platform Optimization
+Phase 22
+Optimization
 
-PHASE 21
-Launch Preparation
+Phase 23
+Launch
