@@ -1,65 +1,82 @@
 # Roadmap
+---
+# Completed Phase
+---
 
-Completed
+# Phase 1 ✔
+Repository Foundation
 
-✔ Repository Foundation
+# Phase 2 ✔
+Carousel Structure
 
-✔ Carousel Architecture
+# Phase 3 ✔
+Geometry Engine
 
-✔ Carousel Rendering
+# Phase 4 ✔
+Rendering Engine
 
-✔ Auto Glide
+# Phase 5 ✔
+Motion Engine
 
-✔ Touch Controls
+# Phase 6 ✔
+Interaction Engine
 
-✔ Edge Detection
+# Phase 7 ✔
+Center Card Architecture
 
-✔ Preview System
+# Phase 8 ✔
+Preview System
 
-✔ Upload Capacity Reminder
+# Phase 9 ✔
+Upload Capacity Reminder
+
+---
+
+# Current
+
+# Phase 10
+
+Hero Section
 
 ---
 
 Upcoming
 
-Phase 8
-Hero Section
-
-Phase 9
+Phase 11
 About Section
 
-Phase 10
+Phase 12
 Featured Projects
 
-Phase 11
-Services Section
-
-Phase 12
-Home Integration
-
 Phase 13
-About Page
+Services
 
 Phase 14
-Works Page
+Home Integration
 
 Phase 15
-Edit Dashboard
+About Page
 
 Phase 16
-Signup System
+Works Page
 
 Phase 17
-Permission System
+Edit Dashboard
 
 Phase 18
-Identity Search Engine
+Authentication
 
 Phase 19
-Data Layer
+Permission System
 
 Phase 20
-Optimization
+Identity Search
 
 Phase 21
+Database Integration
+
+Phase 22
+Optimization
+
+Phase 23
 Launch
