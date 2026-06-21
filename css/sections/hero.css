@@ -20,7 +20,7 @@
 
     position: absolute;
 
-    top: 42%;
+    top: 35%;
 
     left: 50%;
 
@@ -78,15 +78,15 @@
 
     .hero {
 
-        height: 30vh;
+        height: 22vh;
 
     }
 
     .hero-portrait {
 
-        width: 120px;
+        width: 140px;
 
-        height: 20vh;
+        height: 19vh;
 
         left: 30%;
 
