@@ -46,6 +46,39 @@
 
 }
 
+.hero-quote {
+
+    position: absolute;
+
+    top: 48%;
+
+    left: 50%;
+
+    transform:
+    translateX(-50%);
+
+    width: 70%;
+
+    text-align: center;
+
+    color:
+    rgba(
+        255,
+        255,
+        255,
+        0.8
+    );
+
+    font-size: 1rem;
+
+    font-style: italic;
+
+    line-height: 1.6;
+
+    z-index: 3;
+
+}
+
 
  .hero-portrait {
 
@@ -91,6 +124,16 @@
 
 @media (max-width: 767px) {
 
+    .hero-quote {
+
+    width: 85%;
+
+    font-size: 0.85rem;
+
+    top: 44%;
+
+}
+
     .hero {
 
         height: 30vh;
@@ -122,6 +165,14 @@
 and
 (max-width: 1199px) {
 
+    .hero-quote {
+
+    width: 80%;
+
+    font-size: 0.95rem;
+
+}
+
     .hero {
 
         height: 33vh;
@@ -144,6 +195,14 @@ and
 /* DESKTOP LAPTOP BROWSER */
 
 @media (min-width: 1200px) {
+
+    .hero-quote {
+
+    width: 60%;
+
+    font-size: 1.15rem;
+
+}
 
     .hero {
 
