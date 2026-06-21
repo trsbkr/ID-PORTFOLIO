@@ -65,7 +65,8 @@
     width: auto;
 
     background:
-    #ff0000;
+        transparent;
+    /* #ff0000; */
 
     z-index: 2;
 
