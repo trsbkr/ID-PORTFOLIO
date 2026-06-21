@@ -32,13 +32,13 @@
 
     font-size: 12vw;
 
-    font-weight: 700;
+    font-weight: 600;
 
     color: white;
 
     z-index: 1;
 
-        width: 80%;
+        width: 85%;
 
     text-align: center;
 
@@ -88,13 +88,13 @@
 
         height: 24vh;
 
-        left: 30%;
+        left: 32%;
 
     }
 
     .hero-name {
 
-        font-size: 14vw;
+        font-size: 15vw;
 
     }
 
@@ -109,7 +109,7 @@ and
 
     .hero {
 
-        height: 35vh;
+        height: 33vh;
 
     }
 
@@ -117,9 +117,9 @@ and
 
         width: 140px;
 
-        height: 18vh;
+        height: 26vh;
 
-        left: 30%;
+        left: 35%;
 
     }
 
