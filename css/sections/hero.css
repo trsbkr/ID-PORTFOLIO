@@ -22,7 +22,7 @@
 
     top: 35%;
 
-    left: 50%;
+    left: 35%;
 
     transform:
     translate(
@@ -38,7 +38,7 @@
 
     z-index: 1;
 
-        width: 85%;
+        width: 80%;
 
     text-align: center;
 
@@ -51,7 +51,7 @@
 
     position: absolute;
 
-    left: 35%;
+    left: 37%;
 
     bottom: 0;
 
@@ -78,15 +78,15 @@
 
     .hero {
 
-        height: 22vh;
+        height: 28vh;
 
     }
 
     .hero-portrait {
 
-        width: 140px;
+        width: 130px;
 
-        height: 19vh;
+        height: 20vh;
 
         left: 30%;
 
@@ -94,7 +94,7 @@
 
     .hero-name {
 
-        font-size: 15vw;
+        font-size: 12vw;
 
     }
 
