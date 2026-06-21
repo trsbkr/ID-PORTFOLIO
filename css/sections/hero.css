@@ -71,6 +71,18 @@
 
 } 
 
+.hero-portrait-image {
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: contain;
+
+    display: block;
+
+}
+
 
 /* MOBILE NORMAL BROWSER */
 
