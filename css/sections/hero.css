@@ -22,7 +22,7 @@
 
     top: 35%;
 
-    left: 35%;
+    left: 40%;
 
     transform:
     translate(
@@ -32,7 +32,7 @@
 
     font-size: 12vw;
 
-    font-weight: 900;
+    font-weight: 700;
 
     color: white;
 
@@ -78,7 +78,7 @@
 
     .hero {
 
-        height: 28vh;
+        height: 30vh;
 
     }
 
@@ -86,7 +86,7 @@
 
         width: 130px;
 
-        height: 20vh;
+        height: 24vh;
 
         left: 30%;
 
