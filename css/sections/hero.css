@@ -22,7 +22,7 @@
 
     top: 42%;
 
-    left: 35%;
+    left: 50%;
 
     transform:
     translate(
@@ -30,7 +30,7 @@
         -50%
     );
 
-    font-size: 15vw;
+    font-size: 12vw;
 
     font-weight: 900;
 
@@ -86,15 +86,15 @@
 
         width: 120px;
 
-        height: 15vh;
+        height: 20vh;
 
-        left: 25%;
+        left: 30%;
 
     }
 
     .hero-name {
 
-        font-size: 12vw;
+        font-size: 15vw;
 
     }
 
