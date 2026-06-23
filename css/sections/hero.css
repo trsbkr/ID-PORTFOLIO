@@ -607,105 +607,6 @@ SWITCH BUTTON*/
 
 
 
-/* =====================================
-   MOBILE NORMAL BROWSER (MNB) OVERRIDE
-======================================== */
-/*
-@media (max-width: 767px) {
-
-    .hero-nav {
-
-        top: 12px;
-        right: 12px;
-        gap: 6px;
-
-    }
-
-    .dropdown-menu {
-
-        top: 46px;
-        right: 0;
-        gap: 8px;
-
-    }
-
-    .dropdown-btn {
-
-        gap: 6px;
-        padding: 10px 14px;
-
-    }
-
-    .switch-btn {
-
-        width: 72px;
-        height: 34px;
-
-    }
-
-    .switch-label {
-
-        font-size: 0.42rem;
-
-        padding-right: 7px;
-
-    }
-
-    .switch-knob {
-
-        left: 4px;
-        top: 4px;
-
-        width: 26px;
-        height: 26px;
-
-    }
-
-    .switch-dot {
-
-        top: 5px;
-        right: 5px;
-
-        width: 3px;
-        height: 3px;
-
-    }
-
-    .switch-btn.active .switch-knob {
-
-        transform:
-        translateX(38px);
-
-    }
-
-    .switch-btn.active .switch-label {
-
-        transform:
-        translateX(-30px);
-
-    }
-
-}
-
-*/
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* ==================================
    MOBILE NORMAL BROWSER (MNB)
 ================================== */
@@ -718,11 +619,11 @@ SWITCH BUTTON*/
 
     .hero-nav {
 
-        top: 10px;
+        top: 8px;
 
-        right: 10px;
+        right: 8px;
 
-        gap: 4px;
+        gap: 3px;
 
     }
 
@@ -733,11 +634,25 @@ SWITCH BUTTON*/
 
     .dropdown-menu {
 
-        top: 38px;
+        top: 32px;
 
         right: 0;
 
-        gap: 5px;
+        gap: 4px;
+
+    }
+
+ /* ======================
+       DROPDOWN BUTTONS
+    ====================== */
+
+    .dropdown-btn {
+
+        gap: 2px;
+
+        padding: 4px 6px;
+
+        font-size: 0.46rem;
 
     }
 
@@ -750,9 +665,9 @@ SWITCH BUTTON*/
 
     .switch-btn {
 
-        width: 60px;
+        width: 51px;
 
-        height: 30px;
+        height: 26px;
 
         border-radius: 9999px;
 
@@ -777,13 +692,13 @@ SWITCH BUTTON*/
         flex-end;
 
         font-size:
-        0.38rem;
+        0.32rem;
 
         letter-spacing:
-        0.4px;
+        0.3px;
 
         padding-right:
-        5px;
+        4px;
 
     }
 
@@ -794,16 +709,16 @@ SWITCH BUTTON*/
 
     .switch-knob {
 
-        left: 3px;
+        left: 2px;
 
-        top: 3px;
+        top: 2px;
 
-        width: 24px;
+        width: 20px;
 
-        height: 24px;
+        height: 20px;
 
         font-size:
-        0.65rem;
+        0.55rem;
 
     }
 
@@ -814,9 +729,9 @@ SWITCH BUTTON*/
 
     .switch-dot {
 
-        top: 4px;
+        top: 3px;
 
-        right: 4px;
+        right: 3px;
 
         width: 3px;
 
@@ -831,7 +746,7 @@ SWITCH BUTTON*/
 
     .switch__base-inner {
 
-        inset: 3px;
+        inset: 2px;
 
     }
 
@@ -844,7 +759,7 @@ SWITCH BUTTON*/
     .switch-knob {
 
         transform:
-        translateX(30px);
+        translateX(25px);
 
     }
 
@@ -857,7 +772,7 @@ SWITCH BUTTON*/
     .switch-label {
 
         transform:
-        translateX(-24px);
+        translateX(-20px);
 
     }
 
@@ -870,9 +785,9 @@ SWITCH BUTTON*/
     .dropdown-menu
     .switch-btn {
 
-        width: 60px;
+        width: 51px;
 
-        height: 30px;
+        height: 26px;
 
     }
 
@@ -904,141 +819,216 @@ SWITCH BUTTON*/
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* ==================================
-   MOBILE ULTRA COMPACT MODE (MNB)
+   MOBILE NORMAL BROWSER (MNB)
 ================================== */
 /*
 @media (max-width: 767px) {
 
+    /* ======================
+       HERO NAV CONTAINER
+    ====================== */
+/*
     .hero-nav {
 
         top: 10px;
+
         right: 10px;
-        gap: 3px;
 
-    }
-
-    .dropdown-menu {
-
-        top: 40px;
-        right: 0;
         gap: 4px;
 
     }
 
-    .dropdown-btn {
 
-        gap: 3px;
-        padding: 5px 7px;
-        font-size: 0.55rem;
+    /* ======================
+       DROPDOWN CONTAINER
+    ====================== */
+/*
+    .dropdown-menu {
+
+        top: 38px;
+
+        right: 0;
+
+        gap: 5px;
 
     }
 
+
+    /* ======================
+       SWITCH BUTTONS
+       (HOME EMAIL MENU
+       ABOUT WORKS JOIN EDIT)
+    ====================== */
+/*
     .switch-btn {
 
-        width: 36px;
-        height: 17px;
+        width: 60px;
+
+        height: 30px;
+
+        border-radius: 9999px;
+
+        -webkit-tap-highlight-color:
+        transparent;
+
+        user-select: none;
+
+        touch-action:
+        manipulation;
 
     }
 
+
+    /* ======================
+       LABEL
+    ====================== */
+/*
     .switch-label {
 
-        font-size: 0.22rem;
+        justify-content:
+        flex-end;
 
-        padding-right: 3px;
+        font-size:
+        0.38rem;
+
+        letter-spacing:
+        0.4px;
+
+        padding-right:
+        5px;
 
     }
 
+
+    /* ======================
+       KNOB
+    ====================== */
+/*
     .switch-knob {
 
-        left: 2px;
-        top: 2px;
+        left: 3px;
 
-        width: 13px;
-        height: 13px;
+        top: 3px;
+
+        width: 24px;
+
+        height: 24px;
+
+        font-size:
+        0.65rem;
 
     }
 
+
+    /* ======================
+       DOT
+    ====================== */
+/*
     .switch-dot {
 
-        top: 2px;
-        right: 2px;
+        top: 4px;
 
-        width: 2px;
-        height: 2px;
+        right: 4px;
 
-    }
+        width: 3px;
 
-    .switch-btn.active .switch-knob {
-
-        transform: translateX(19px);
+        height: 3px;
 
     }
 
-    .switch-btn.active .switch-label {
 
-        transform: translateX(-15px);
+    /* ======================
+       INNER TRACK
+    ====================== */
+/*
+    .switch__base-inner {
 
-    }
-
-    /* REQUIRED MOBILE INTERACTION FIXES */
-    .switch-label {
-        letter-spacing: 0.5px;
-        touch-action: manipulation;
-        -webkit-tap-highlight-color: transparent;
-    }
-
-}
-
-
-
-
-
-
-
-
-
-
-
-
-/* @media (max-width: 767px) {
-
-    .hero-nav {
-
-        gap: 6px;
-
-        top: 12px;
-
-        right: 12px;
+        inset: 3px;
 
     }
 
-    .switch-btn {
 
-        width: 70px;
-
-        height: 36px;
-
-    }
-
+    /* ======================
+       KNOB TRAVEL
+    ====================== */
+/*
+    .switch-btn.active
     .switch-knob {
 
-        width: 26px;
-
-        height: 26px;
+        transform:
+        translateX(30px);
 
     }
 
+
+    /* ======================
+       LABEL TRAVEL
+    ====================== */
+/*
+    .switch-btn.active
     .switch-label {
 
-        font-size: .45rem;
+        transform:
+        translateX(-24px);
+
+    }
+
+
+    /* ======================
+       DROPDOWN WIDTH
+       MATCH SWITCHES
+    ====================== */
+/*
+    .dropdown-menu
+    .switch-btn {
+
+        width: 60px;
+
+        height: 30px;
+
+    }
+
+
+    /* ======================
+       REMOVE BLUE FLASH
+    ====================== */
+/*
+    .switch-btn,
+
+    .switch-btn *,
+
+    .switch-btn:focus,
+
+    .switch-btn:active,
+
+    .switch-btn:focus-visible {
+
+        outline: none;
+
+        -webkit-tap-highlight-color:
+        transparent;
 
     }
 
 }
+
 */
-
-
-
-
 
