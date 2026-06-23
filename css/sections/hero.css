@@ -610,7 +610,7 @@ SWITCH BUTTON*/
 /* =====================================
    MOBILE NORMAL BROWSER (MNB) OVERRIDE
 ======================================== */
-
+/*
 @media (max-width: 767px) {
 
     .hero-nav {
@@ -687,6 +687,7 @@ SWITCH BUTTON*/
 
 }
 
+*/
 
 
 
@@ -694,6 +695,103 @@ SWITCH BUTTON*/
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+/* ==================================
+   MOBILE ULTRA COMPACT MODE (MNB)
+================================== */
+
+@media (max-width: 767px) {
+
+    .hero-nav {
+
+        top: 10px;
+        right: 10px;
+        gap: 3px;
+
+    }
+
+    .dropdown-menu {
+
+        top: 40px;
+        right: 0;
+        gap: 4px;
+
+    }
+
+    .dropdown-btn {
+
+        gap: 3px;
+        padding: 5px 7px;
+        font-size: 0.55rem;
+
+    }
+
+    .switch-btn {
+
+        width: 36px;
+        height: 17px;
+
+    }
+
+    .switch-label {
+
+        font-size: 0.22rem;
+
+        padding-right: 3px;
+
+    }
+
+    .switch-knob {
+
+        left: 2px;
+        top: 2px;
+
+        width: 13px;
+        height: 13px;
+
+    }
+
+    .switch-dot {
+
+        top: 2px;
+        right: 2px;
+
+        width: 2px;
+        height: 2px;
+
+    }
+
+    .switch-btn.active .switch-knob {
+
+        transform: translateX(19px);
+
+    }
+
+    .switch-btn.active .switch-label {
+
+        transform: translateX(-15px);
+
+    }
+
+    /* REQUIRED MOBILE INTERACTION FIXES */
+    .switch-label {
+        letter-spacing: 0.5px;
+        touch-action: manipulation;
+        -webkit-tap-highlight-color: transparent;
+    }
+
+}
 
 
 
