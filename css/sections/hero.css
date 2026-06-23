@@ -603,7 +603,110 @@ SWITCH BUTTON*/
 }
 
 
+
+
+
+
+/* =====================================
+   MOBILE NORMAL BROWSER (MNB) OVERRIDE
+======================================== */
+
 @media (max-width: 767px) {
+
+    .hero-nav {
+
+        top: 12px;
+        right: 12px;
+        gap: 6px;
+
+    }
+
+    .dropdown-menu {
+
+        top: 46px;
+        right: 0;
+        gap: 8px;
+
+    }
+
+    .dropdown-btn {
+
+        gap: 6px;
+        padding: 10px 14px;
+
+    }
+
+    .switch-btn {
+
+        width: 72px;
+        height: 34px;
+
+    }
+
+    .switch-label {
+
+        font-size: 0.42rem;
+
+        padding-right: 7px;
+
+    }
+
+    .switch-knob {
+
+        left: 4px;
+        top: 4px;
+
+        width: 26px;
+        height: 26px;
+
+    }
+
+    .switch-dot {
+
+        top: 5px;
+        right: 5px;
+
+        width: 3px;
+        height: 3px;
+
+    }
+
+    .switch-btn.active .switch-knob {
+
+        transform:
+        translateX(38px);
+
+    }
+
+    .switch-btn.active .switch-label {
+
+        transform:
+        translateX(-30px);
+
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* @media (max-width: 767px) {
 
     .hero-nav {
 
@@ -638,7 +741,7 @@ SWITCH BUTTON*/
     }
 
 }
-
+*/
 
 
 
