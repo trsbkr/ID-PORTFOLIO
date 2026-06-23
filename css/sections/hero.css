@@ -571,23 +571,6 @@ SWITCH BUTTON*/
    WITHIN THE MAIN SWITCH 
    ======================== */
 
-.switch-btn.active .switch-knob {
-
-    transform:
-    translateX(
-         45px
-    );
-
-}
-
-.switch-btn.active .switch-dot {
-
-    background:
-    #00ff88;
-
-}
-
-
 .switch-label {
 
     transition:
@@ -604,18 +587,149 @@ SWITCH BUTTON*/
 
 
 
+/* =============================
+   COMMENTED OUT BLOCK CODE
+   FOR NEON LIGHT REPLACEMENT
+   CHECK BELOW TO RESWITCH
+   ============================ */
+/*
+
+.switch-btn.active .switch-knob {
+
+    transform:
+    translateX(
+         45px
+    );
+
+}
+*/
+
+
+/* =============================
+   COMMENTED OUT BLOCK CODE
+   FOR NEON LIGHT REPLACEMENT
+   CHECK BELOW TO RESWITCH
+   ============================ */
+/*
+.switch-btn.active .switch-dot {
+
+    background:
+    #00ff88;
+
+} 
+*/
+
+
+
+
+
+
+
+
+/* ============================
+   THIS SECTION OF BLOCK CODE IS
+   FOR SWITCH SELECTION MODE FROM
+   NORMAL SWITCH TO THE NEON LIGHT
+   SWITCH BY USERS................
+   ...............................
+   ENSURE TO CHECK THESE ELEMENT
+   ...............................
+   .switch-btn.active .switch-dot
+   .switch-btn.active .switch-knob
+
+   ................................
+   =============================== */
+
+
+/* =================================
+   NEOH LIGHT SWITCH REPLACEMENT FOR 
+   THE COMMENTED OUT BLOCK CODE FOR
+   
+   .switch-btn.active .switch-dot
+   ================================ */
+
+.switch-btn.active .switch-dot {
+
+    background:
+    #00ff88;
+
+    box-shadow:
+
+        0 0 4px #00ff88,
+
+        0 0 8px #00ff88,
+
+        0 0 14px
+        rgba(0,255,136,.60);
+
+}
+
+
+/* =================================
+   NEOH LIGHT SWITCH REPLACEMENT FOR 
+   THE COMMENTED OUT BLOCK CODE FOR
+   
+   .switch-btn.active .switch-knob
+   ================================ */
+
+
+.switch-btn.active .switch-knob {
+
+    box-shadow:
+
+        0 0 6px rgba(0,255,136,.25),
+
+        0 0 14px rgba(0,255,136,.15),
+
+        4px 4px 10px rgba(0,0,0,.55),
+
+        -2px -2px 6px rgba(255,255,255,.05),
+
+        inset 1px 1px 2px rgba(255,255,255,.10),
+
+        inset -1px -1px 2px rgba(0,0,0,.45);
+
+}
+
+
+
+/* ==========================
+   NEON MODE ENGINE
+   ========================== */
+
+.switch-btn.active {
+
+    box-shadow:
+
+        0 0 6px rgba(0,255,136,.20),
+
+        0 0 12px rgba(0,255,136,.12),
+
+        12px 12px 18px rgba(0,0,0,.55),
+
+        inset 1px 1px 1px
+        rgba(255,255,255,.06);
+
+}
+
+
+
+
+
+
 
 
 
 /* ==================================
+   THIS OVERRIDE BLOCK CODE IS FOR 
    MOBILE NORMAL BROWSER (MNB)
-================================== */
+   ================================== */
 
 @media (max-width: 767px) {
 
-    /* ======================
-       HERO NAV CONTAINER
-    ====================== */
+    /* ===========================
+       HERO NAV CONTAINER OVERRIDE
+       =========================== */
 
     .hero-nav {
 
@@ -628,9 +742,9 @@ SWITCH BUTTON*/
     }
 
 
-    /* ======================
-       DROPDOWN CONTAINER
-    ====================== */
+    /* ===========================
+       DROPDOWN CONTAINER OVERRIDE
+       ============================ */
 
     .dropdown-menu {
 
@@ -642,9 +756,9 @@ SWITCH BUTTON*/
 
     }
 
- /* ======================
-       DROPDOWN BUTTONS
-    ====================== */
+ /* =========================
+    DROPDOWN BUTTONS OVERRIDE
+    ========================= */
 
     .dropdown-btn {
 
@@ -657,11 +771,11 @@ SWITCH BUTTON*/
     }
 
 
-    /* ======================
-       SWITCH BUTTONS
+    /* =======================
+       SWITCH BUTTONS OVERRIDE
        (HOME EMAIL MENU
        ABOUT WORKS JOIN EDIT)
-    ====================== */
+       ======================= */
 
     .switch-btn {
 
@@ -682,9 +796,9 @@ SWITCH BUTTON*/
     }
 
 
-    /* ======================
-       LABEL
-    ====================== */
+    /* ==============
+       LABEL OVERRIDE
+       ============== */
 
     .switch-label {
 
@@ -703,9 +817,9 @@ SWITCH BUTTON*/
     }
 
 
-    /* ======================
-       KNOB
-    ====================== */
+    /* =============
+       KNOB OVERRIDE
+       ============= */
 
     .switch-knob {
 
@@ -723,9 +837,9 @@ SWITCH BUTTON*/
     }
 
 
-    /* ======================
-       DOT
-    ====================== */
+    /* ============
+       DOT OVERRIDE
+       ============ */
 
     .switch-dot {
 
@@ -740,9 +854,9 @@ SWITCH BUTTON*/
     }
 
 
-    /* ======================
-       INNER TRACK
-    ====================== */
+    /* =====================
+       INNER TRACK OVERRIDE
+       ===================== */
 
     .switch__base-inner {
 
@@ -752,8 +866,8 @@ SWITCH BUTTON*/
 
 
     /* ======================
-       KNOB TRAVEL
-    ====================== */
+       KNOB TRAVEL OVERRIDE
+       ====================== */
 
     .switch-btn.active
     .switch-knob {
@@ -765,8 +879,8 @@ SWITCH BUTTON*/
 
 
     /* ======================
-       LABEL TRAVEL
-    ====================== */
+       LABEL TRAVEL OVERRIDE
+       ====================== */
 
     .switch-btn.active
     .switch-label {
@@ -778,9 +892,9 @@ SWITCH BUTTON*/
 
 
     /* ======================
-       DROPDOWN WIDTH
-       MATCH SWITCHES
-    ====================== */
+       DROPDOWN WIDTH MATCH 
+       SWITCHES OVERRIDE
+       ====================== */
 
     .dropdown-menu
     .switch-btn {
@@ -792,9 +906,9 @@ SWITCH BUTTON*/
     }
 
 
-    /* ======================
-       REMOVE BLUE FLASH
-    ====================== */
+    /* ==========================
+       REMOVE BLUE FLASH OVERRIDE
+       ========================== */
 
     .switch-btn,
 
@@ -837,8 +951,11 @@ SWITCH BUTTON*/
 
 
 /* ==================================
+   THIS COMMENTED OUT BLOCK CODE IS
+   A SUBSTITUTE SWITCH RESIZING 
+   OVERRIDE BLOCK CODE IS FOR 
    MOBILE NORMAL BROWSER (MNB)
-================================== */
+   ================================== */
 /*
 @media (max-width: 767px) {
 
