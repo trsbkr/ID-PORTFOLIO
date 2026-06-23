@@ -706,11 +706,208 @@ SWITCH BUTTON*/
 
 
 
+/* ==================================
+   MOBILE NORMAL BROWSER (MNB)
+================================== */
+
+@media (max-width: 767px) {
+
+    /* ======================
+       HERO NAV CONTAINER
+    ====================== */
+
+    .hero-nav {
+
+        top: 10px;
+
+        right: 10px;
+
+        gap: 4px;
+
+    }
+
+
+    /* ======================
+       DROPDOWN CONTAINER
+    ====================== */
+
+    .dropdown-menu {
+
+        top: 38px;
+
+        right: 0;
+
+        gap: 5px;
+
+    }
+
+
+    /* ======================
+       SWITCH BUTTONS
+       (HOME EMAIL MENU
+       ABOUT WORKS JOIN EDIT)
+    ====================== */
+
+    .switch-btn {
+
+        width: 60px;
+
+        height: 30px;
+
+        border-radius: 9999px;
+
+        -webkit-tap-highlight-color:
+        transparent;
+
+        user-select: none;
+
+        touch-action:
+        manipulation;
+
+    }
+
+
+    /* ======================
+       LABEL
+    ====================== */
+
+    .switch-label {
+
+        justify-content:
+        flex-end;
+
+        font-size:
+        0.38rem;
+
+        letter-spacing:
+        0.4px;
+
+        padding-right:
+        5px;
+
+    }
+
+
+    /* ======================
+       KNOB
+    ====================== */
+
+    .switch-knob {
+
+        left: 3px;
+
+        top: 3px;
+
+        width: 24px;
+
+        height: 24px;
+
+        font-size:
+        0.65rem;
+
+    }
+
+
+    /* ======================
+       DOT
+    ====================== */
+
+    .switch-dot {
+
+        top: 4px;
+
+        right: 4px;
+
+        width: 3px;
+
+        height: 3px;
+
+    }
+
+
+    /* ======================
+       INNER TRACK
+    ====================== */
+
+    .switch__base-inner {
+
+        inset: 3px;
+
+    }
+
+
+    /* ======================
+       KNOB TRAVEL
+    ====================== */
+
+    .switch-btn.active
+    .switch-knob {
+
+        transform:
+        translateX(30px);
+
+    }
+
+
+    /* ======================
+       LABEL TRAVEL
+    ====================== */
+
+    .switch-btn.active
+    .switch-label {
+
+        transform:
+        translateX(-24px);
+
+    }
+
+
+    /* ======================
+       DROPDOWN WIDTH
+       MATCH SWITCHES
+    ====================== */
+
+    .dropdown-menu
+    .switch-btn {
+
+        width: 60px;
+
+        height: 30px;
+
+    }
+
+
+    /* ======================
+       REMOVE BLUE FLASH
+    ====================== */
+
+    .switch-btn,
+
+    .switch-btn *,
+
+    .switch-btn:focus,
+
+    .switch-btn:active,
+
+    .switch-btn:focus-visible {
+
+        outline: none;
+
+        -webkit-tap-highlight-color:
+        transparent;
+
+    }
+
+}
+
+
+
+
 
 /* ==================================
    MOBILE ULTRA COMPACT MODE (MNB)
 ================================== */
-
+/*
 @media (max-width: 767px) {
 
     .hero-nav {
