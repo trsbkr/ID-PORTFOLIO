@@ -225,6 +225,385 @@ and
 
 
 
+/* =========================
+   HERO NAVIGATION
+========================= */
+
+.hero-nav {
+
+    position: absolute;
+
+    top: 20px;
+
+    right: 22px;
+
+    display: flex;
+
+    gap: 10px;
+
+    z-index: 100;
+
+}
+
+.nav-btn {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 8px;
+
+    padding: 14px 26px;
+
+    border-radius: 999px;
+
+    border: none;
+
+    text-decoration: none;
+
+    cursor: pointer;
+
+    background:  linear-gradient(
+                 145deg,
+                 #2d2d2d,
+                 #121212   ); 
+
+
+    color: white;
+
+    font-weight: 800;
+
+    font-size: 0.9rem;
+
+    box-shadow:
+        6px 6px 14px rgba(0,0,0,.45),
+       /* inset 1px 1px 10px */
+        rgba(255,255,255,.06);
+
+    transition: all .3s ease;
+
+}
+
+.nav-btn:hover {
+
+    transform: translateY(-2px);
+
+}
+
+
+/* =====================
+   MENU DROPDOWN BUTTONS 
+========================*/
+
+.dropdown-menu {
+
+    position: absolute;
+
+/* TO RESIZE THE 
+DROPDOWN BUTTON */
+
+    top: 53px;
+
+    right: 0.2px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 12px;
+
+    opacity: 0;
+
+    visibility: hidden;
+
+    transform: translateY(-15px);
+
+    transition: all .35s ease;
+
+    z-index: 99;
+
+}
+
+.dropdown-menu.active {
+
+    opacity: 1;
+
+    visibility: visible;
+
+    transform: translateY(0);
+
+}
+
+.dropdown-btn {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 10px;
+
+    z-index: 100; 
+
+    padding: 14px 20px;
+
+    text-decoration: none;
+
+    border-radius: 999px;
+
+    background:  linear-gradient(
+                 145deg,
+                 #2d2d2d,
+                 #121212   ); 
+
+    color: white;
+
+    font-weight: 600;
+
+    font-size: 0.8rem;
+
+    box-shadow:
+        6px 6px 14px rgba(0,0,0,.45),
+        inset 1px 1px 1px
+        rgba(255,255,255,.06);
+
+    transition: all .25s ease;
+
+}
+
+.dropdown-btn:hover {
+
+    transform: translateX(-4px);
+
+}
+
+
+/* ======================
+   THE MAIN SWITCH WHERE 
+   THE KNOB RESIDES IN 
+   ====================== */
+
+.switch-btn {
+
+    display: flex;
+
+    position: relative;
+
+
+/* TO RESIZE THE
+SWITCH BUTTON*/
+
+    width: 87px;
+
+    height: 42px;
+
+    border-radius: 9999px;
+
+    background:
+    linear-gradient(
+        145deg,
+        #2d2d2d,
+        #121212
+    );
+
+      box-shadow:
+        12px 12px 18px rgba(0,0,0,.55),
+        inset 1px 1px 1px 
+        rgba(255,255,255,.06); 
+
+    cursor: pointer;
+
+    overflow: hidden;
+
+    transition:
+    transform .45s ease;
+
+} 
+
+.switch-btn:hover {
+
+    transform: translateY(-3.5px);
+
+}
+
+
+/* ======================
+   THE MAIN SWITCH LABEL 
+   WHERE KNOB RESIDES IN 
+   ====================== */
+
+.switch-label {
+
+    position: absolute;
+
+    inset: 0;
+
+    display: flex; 
+
+    align-items: center;
+
+    justify-content: flex-end;
+
+    color: white;
+
+    font-weight: 600;
+
+    letter-spacing: 1px;
+
+    font-size: 0.55rem;
+
+    padding-right: 9px
+     
+}
+
+
+    /* ── Track (outer shell) ── */
+    .switch__base-outer {
+      display: block;
+      position: absolute;
+      inset: 0;
+      border-radius: 9999px;
+      background: /*#23293a*/;
+      box-shadow:
+        12px 12px 28px #12161f,
+        -8px -8px 20px #2e3650;
+      transition: box-shadow 0.45s ease;
+    }
+
+
+    /* ── Inner track recess ── */
+    .switch__base-inner {
+      display: block;
+      position: absolute;
+      inset: 4.2px;
+      border-radius: 9999px;
+      background: #1a1f2e;
+      box-shadow:
+        inset 6px 6px 10px #0e111a,
+        inset -20px -20px 30px #252c3e;
+    }
+
+
+/* ======================
+   THE KNOB RESIDING 
+   WITHIN THE MAIN SWITCH 
+   ====================== */
+
+.switch-knob {
+
+    position: absolute;
+
+    left: 5px;
+
+    top: 5px;
+
+    width: 32px;
+
+    height: 32px;
+
+    border-radius: 50%;
+
+    background:
+    linear-gradient(
+        145deg,
+        #4d4d4d,
+        #141414
+    );
+
+    box-shadow:
+
+        4px 4px 10px
+        rgba(0,0,0,.55),
+
+        -2px -2px 6px
+        rgba(255,255,255,.05),
+
+        inset 1px 1px 2px
+        rgba(255,255,255,.10),
+
+        inset -1px -1px 2px
+        rgba(0,0,0,.45);
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    transition:
+    transform .35s ease;
+
+    z-index: 2;
+
+}
+
+
+/* ===============
+   THE DOT ON KNOB  
+   =============== */
+
+
+.switch-dot {
+
+    position: absolute;
+
+    top: 6px;
+
+    right: 6px;
+
+    width: 4px;
+
+    height: 4px;
+
+    border-radius: 50%;
+
+    background: red;
+
+}
+
+
+/* ========================
+   THE ACTIVE STATE OF BOTH 
+   THE DOT, LABEL & KNOB  
+   WITHIN THE MAIN SWITCH 
+   ======================== */
+
+.switch-btn.active .switch-knob {
+
+    transform:
+    translateX(
+         45px
+    );
+
+}
+
+.switch-btn.active .switch-dot {
+
+    background:
+    #00ff88;
+
+}
+
+
+.switch-label {
+
+    transition:
+    transform .35s ease;
+
+}
+
+.switch-btn.active .switch-label {
+
+    transform:
+    translateX(-37px);
+
+}
+
+
+
 
 
 
