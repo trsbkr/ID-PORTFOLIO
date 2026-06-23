@@ -603,7 +603,41 @@ SWITCH BUTTON*/
 }
 
 
+@media (max-width: 767px) {
 
+    .hero-nav {
+
+        gap: 6px;
+
+        top: 12px;
+
+        right: 12px;
+
+    }
+
+    .switch-btn {
+
+        width: 70px;
+
+        height: 36px;
+
+    }
+
+    .switch-knob {
+
+        width: 26px;
+
+        height: 26px;
+
+    }
+
+    .switch-label {
+
+        font-size: .45rem;
+
+    }
+
+}
 
 
 
