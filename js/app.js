@@ -24,17 +24,9 @@ document
             setTimeout(() => {
             window.location.href =
             btn.dataset.target;
-                btn.classList.remove(
+              /*  btn.classList.remove(
                     "active"
-                );
-
-            
-
-        dropdown.classList.remove(
-            "active"
-        );
-
-    }
+                ); */
 
             }, 450);
 
