@@ -33,11 +33,7 @@ document
         }
     ); 
 
-   
-
-});
-
-window.addEventListener("pageshow", () => {
+   window.addEventListener("pageshow", () => {
 
     document
         .querySelectorAll(".switch-btn")
@@ -48,6 +44,10 @@ window.addEventListener("pageshow", () => {
         });
 
 });
+
+});
+
+
 
 /* ========================
    THE MENU LUANCH LOGIC OF
