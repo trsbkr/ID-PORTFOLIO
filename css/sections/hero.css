@@ -1018,6 +1018,274 @@ body.neon-mode
 
 
 
+/*=============================
+  LIQUID METAL MODE CSS
+  MODE BASE
+===============================*/
+
+
+
+body.liquid-mode .switch-btn {
+
+    background: linear-gradient(145deg, #2d2d2d, #121212);
+
+    box-shadow:
+
+12px 12px 18px rgba(0,0,0,.55)
+
+        0 0 12px rgba(180,180,180,.15),
+        inset 0 0 8px rgba(255,255,255,.05);
+
+}
+
+
+
+/*=============================
+  LIQUID CHROME BORDER (CORE EFFECT)
+  MERCURY RING
+===============================*/
+
+body.liquid-mode .switch-btn::before {
+
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    border-radius: inherit;
+
+    padding: 1.5px;
+
+    background: conic-gradient(
+
+        from 0deg,
+
+        #ffffff,
+        #b8b8b8,
+        #f5f5f5,
+        #6e6e6e,
+        #ffffff,
+        #9a9a9a,
+        #ffffff
+
+    );
+
+    -webkit-mask:
+        linear-gradient(#000 0 0) content-box,
+        linear-gradient(#000 0 0);
+
+    -webkit-mask-composite: xor;
+
+    mask-composite: exclude;
+
+    animation: liquidSpin 3.5s linear infinite;
+
+    opacity: .9;
+
+    filter: blur(.2px);
+
+}
+
+
+
+/*=============================
+  INNER LIQUID FLOW LAYER 
+  (MOVING REFLECTION)
+===============================*/
+
+
+body.liquid-mode .switch-btn::after {
+
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    border-radius: inherit;
+
+    background: linear-gradient(
+
+        120deg,
+
+        transparent 0%,
+        rgba(255,255,255,.25) 40%,
+        rgba(255,255,255,.6) 50%,
+        rgba(255,255,255,.25) 60%,
+        transparent 100%
+
+    );
+
+    transform: translateX(-120%);
+
+    animation: liquidSweep 2.8s ease-in-out infinite;
+
+    mix-blend-mode: screen;
+
+}
+
+
+
+
+/*=============================
+  LIQUID KNOB 
+  (EDGE ONLY — NOT FULL FILL)
+===============================*/
+
+body.liquid-mode .switch-knob {
+
+    background: linear-gradient(145deg, #0e0e0e, #1a1a1a);
+
+    box-shadow:
+        inset 0 0 8px rgba(255,255,255,.08),
+        0 0 10px rgba(255,255,255,.05);
+
+}
+
+
+
+
+
+/*=============================
+  METAL RIM ON KNOB 
+  (NOT FULL LIQUID)
+===============================*/
+
+body.liquid-mode .switch-knob::before {
+
+    content: "";
+
+    position: absolute;
+
+    inset: -1px;
+ 
+    z-index: 999;
+
+    border-radius: 50%;
+
+    padding: 1px;
+
+    background: conic-gradient(
+
+        #ffffff,
+        #7a7a7a,
+        #eaeaea,
+        #5a5a5a,
+        #ffffff
+
+    );
+
+    -webkit-mask:
+        linear-gradient(#000 0 0) content-box,
+        linear-gradient(#000 0 0);
+
+    -webkit-mask-composite: xor;
+
+    mask-composite: exclude;
+
+    animation: knobMetal 2.5s linear infinite;
+
+}
+
+
+
+
+/*=============================
+  KNOB HIGHLIGHT 
+  THAT FOLLOWS MOVEMENT
+===============================*/
+
+
+body.liquid-mode .switch-knob::after {
+
+    content: "";
+
+    position: absolute;
+
+    top: 3px;
+
+    left: 3px;
+
+    width: 40%;
+
+    height: 40%;
+
+    border-radius: 50%;
+
+    background: radial-gradient(
+
+        rgba(255,255,255,.9),
+        transparent
+
+    );
+
+    opacity: .85;
+
+}
+
+
+body.liquid-mode .switch-knob::after { 
+                transform: translate( 
+
+calc((var(--mx, .1)
+                 - .100) 
+                      * 12.5px),
+
+calc((var(--my, .1)
+                 - .100) 
+                      * 12.5px) 
+
+    );}
+
+
+
+
+
+
+/*=============================
+  ANIMATIONS
+===============================*/
+
+@keyframes liquidSpin {
+
+    from { transform: rotate(0deg); }
+    to   { transform: rotate(360deg); }
+
+}
+
+@keyframes liquidSweep {
+
+    0% { transform: translateX(-120%); }
+    50% { transform: translateX(120%); }
+    100% { transform: translateX(-120%); }
+
+}
+
+@keyframes knobMetal {
+
+    from { transform: rotate(0deg); }
+    to   { transform: rotate(-360deg); }
+
+} 
+
+
+
+/*=============================
+  JS - CSS ADDITION 
+  (IMPORTANT LINK)
+  JS update --liq dynamically
+===============================*/
+
+body.liquid-mode .switch-btn {
+    --liq: 0;
+} 
+
+
+
+
+
+
 
 
 
