@@ -24,15 +24,15 @@ document
             setTimeout(() => {
             window.location.href =
             btn.dataset.target;
-              /*  btn.classList.remove(
+                btn.classList.remove(
                     "active"
-                ); */
+                ); 
 
             }, 450);
 
         }
     ); 
-
+/*
    window.addEventListener("pageshow", () => {
 
     document
@@ -43,7 +43,7 @@ document
 
         });
 
-});
+}); */
 
 });
 
