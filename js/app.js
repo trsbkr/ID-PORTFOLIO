@@ -24,26 +24,16 @@ document
             setTimeout(() => {
             window.location.href =
             btn.dataset.target;
-
-                btn.classList.remove("active");
-
-            if (dropdown) {
-        dropdown.classList.remove(
-            "active"
-                
-                ); 
+              /*  btn.classList.remove(
+                    "active"
+                ); */
 
             }, 450);
 
         }
     ); 
-   
 
-
-   
-
-    }
-);
+});
 
 
 
