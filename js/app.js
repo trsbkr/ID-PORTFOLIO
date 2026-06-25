@@ -66,10 +66,13 @@ menuSwitch.addEventListener(
             "active"
         );
 
-           if (dropdown) {
+    if (dropdown) {
 
         dropdown.classList.remove(
             "active"
+        );
+
+    }
 
     }
 );
