@@ -28,7 +28,7 @@ document
                     "active"
                 );
 
-                   if (dropdown) {
+            
 
         dropdown.classList.remove(
             "active"
