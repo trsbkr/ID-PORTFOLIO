@@ -33,9 +33,21 @@ document
         }
     ); 
 
+   
+
 });
 
+window.addEventListener("pageshow", () => {
 
+    document
+        .querySelectorAll(".switch-btn")
+        .forEach(btn => {
+
+            btn.classList.remove("active");
+
+        });
+
+});
 
 /* ========================
    THE MENU LUANCH LOGIC OF
