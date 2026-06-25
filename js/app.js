@@ -24,6 +24,12 @@ document
             setTimeout(() => {
             window.location.href =
             btn.dataset.target;
+
+                btn.classList.remove("active");
+
+            if (dropdown) {
+        dropdown.classList.remove(
+            "active"
                 
                 ); 
 
@@ -32,27 +38,12 @@ document
         }
     ); 
    
-window.addEventListener("pageshow", () => {
 
-    document
-        .querySelectorAll(".switch-btn")
-        .forEach(btn => {
 
-            btn.classList.remove("active");
-
-        });
-
-    if (dropdown) {
-
-        dropdown.classList.remove(
-            "active"
-        );
+   
 
     }
-
-});
-
-});
+);
 
 
 
