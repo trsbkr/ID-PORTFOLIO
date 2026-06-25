@@ -24,16 +24,15 @@ document
             setTimeout(() => {
             window.location.href =
             btn.dataset.target;
-                btn.classList.remove(
-                    "active"
+                
                 ); 
 
             }, 450);
 
         }
     ); 
-/*
-   window.addEventListener("pageshow", () => {
+   
+window.addEventListener("pageshow", () => {
 
     document
         .querySelectorAll(".switch-btn")
@@ -43,7 +42,20 @@ document
 
         });
 
-}); */
+    const dropdown =
+        document.getElementById(
+            "dropdown-menu"
+        );
+
+    if (dropdown) {
+
+        dropdown.classList.remove(
+            "active"
+        );
+
+    }
+
+});
 
 });
 
