@@ -42,11 +42,6 @@ window.addEventListener("pageshow", () => {
 
         });
 
-    const dropdown =
-        document.getElementById(
-            "dropdown-menu"
-        );
-
     if (dropdown) {
 
         dropdown.classList.remove(
