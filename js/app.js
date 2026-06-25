@@ -37,6 +37,41 @@ document
 
 
 
+
+
+window.addEventListener("pageshow", () => {
+
+    document
+        .querySelectorAll(".switch-btn")
+        .forEach(btn => {
+
+            btn.classList.remove("active");
+
+        });
+
+    const dropdown =
+        document.getElementById(
+            "dropdown-menu"
+        );
+
+    if (dropdown) {
+
+        dropdown.classList.remove(
+            "active"
+        );
+
+    }
+
+});
+
+
+
+
+
+
+
+
+
 /* ========================
    THE MENU LUANCH LOGIC OF
    THE ACTIVE STATE OF BOTH 
