@@ -28,6 +28,14 @@ document
                     "active"
                 ); */
 
+                   if (dropdown) {
+
+        dropdown.classList.remove(
+            "active"
+        );
+
+    }
+
             }, 450);
 
         }
@@ -65,14 +73,6 @@ menuSwitch.addEventListener(
         dropdown.classList.toggle(
             "active"
         );
-
-    if (dropdown) {
-
-        dropdown.classList.remove(
-            "active"
-        );
-
-    }
 
     }
 );
